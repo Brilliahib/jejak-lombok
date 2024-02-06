@@ -1,13 +1,17 @@
-const Card = (props) => {
-  const { children, imageUrl } = props;
+import { Link } from "react-router-dom";
+
+function Card({ imageUrl, title, description, destination }) {
   return (
-    <div className="card">
-      <div className="card-image">
-        {<img src={imageUrl} alt="" height={300} style={{ zIndex: 0 }} />}
+    <Link to={destination}>
+      <div className="card mb-6">
+        <img src={imageUrl} alt="Card" className="card-image rounded-xl" />
+        <div className="card-content">
+          <h6 className="font-bold text-2xl my-4">{title}</h6>
+          <p className="text-justify text-[#6F6F6F]">{description}</p>
+        </div>
       </div>
-      <div className="card-body px-4 pb-8">{children}</div>
-    </div>
+    </Link>
   );
-};
+}
 
 export default Card;

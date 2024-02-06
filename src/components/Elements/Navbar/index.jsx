@@ -35,7 +35,11 @@ export default function Navbar() {
       className={`bg-${
         isScrolled ? "white" : "transparent"
       } sticky top-0 transition-all`}
-      style={{ zIndex: 1000 }}
+      style={{
+        zIndex: 1000,
+        paddingTop: isScrolled ? 0 : "30px",
+        color: "#fff",
+      }}
     >
       {({ open }) => (
         <>
@@ -71,8 +75,7 @@ export default function Navbar() {
                           item.current
                             ? "bg-gray-900 text-white"
                             : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                          "rounded-md px-3 py-2 text-sm font-medium",
-                          isScrolled ? "text-slate-900" : "text-white"
+                          "rounded-md px-3 py-2 text-sm font-medium text-slate-900" // Menetapkan warna teks Slate 900
                         )}
                         aria-current={item.current ? "page" : undefined}
                       >
@@ -172,8 +175,7 @@ export default function Navbar() {
                     item.current
                       ? "bg-gray-900 text-white"
                       : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                    "block rounded-md px-3 py-2 text-base font-medium",
-                    isScrolled ? "text-slate-900" : "text-white"
+                    "block rounded-md px-3 py-2 text-base font-medium text-slate-900" // Menetapkan warna teks Slate 900
                   )}
                   aria-current={item.current ? "page" : undefined}
                 >
