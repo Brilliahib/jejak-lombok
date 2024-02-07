@@ -1,6 +1,10 @@
 import SalokaLayout from "../../Layouts/CardDetail/Saloka";
+import React, { useEffect } from "react";
 
 const SalokaPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <SalokaLayout>
       <div className="sm:flex mt-12 sm:grid sm:gap-4 sm:grid-cols-2">
@@ -16,7 +20,7 @@ const SalokaPage = () => {
           </p>
           <img
             className="mt-28 sm:mt-12"
-            src="https://salokapark.com/build/assets/maps_banner.6be0135a.jpg"
+            src="https://salokapark.com/build/assets/tentang_image.cec428ce.jpg"
             alt=""
           />
         </div>

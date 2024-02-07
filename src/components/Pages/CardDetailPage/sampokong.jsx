@@ -1,6 +1,10 @@
 import SampokongLayout from "../../Layouts/CardDetail/Sampokong";
+import React, { useEffect } from "react";
 
 const SampokongPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <SampokongLayout>
       <div className="sm:flex mt-12 sm:grid sm:gap-4 sm:grid-cols-2">

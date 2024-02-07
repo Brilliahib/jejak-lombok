@@ -1,6 +1,10 @@
 import GedongSongoLayout from "../../Layouts/CardDetail/GedongSongo";
+import React, { useEffect } from "react";
 
 const GedongSongoPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <GedongSongoLayout>
       <div className="sm:flex mt-12 sm:grid sm:gap-4 sm:grid-cols-2">

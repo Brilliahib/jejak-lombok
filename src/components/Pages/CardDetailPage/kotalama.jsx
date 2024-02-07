@@ -1,6 +1,10 @@
 import KotaLamaLayout from "../../Layouts/CardDetail/KotaLama";
+import React, { useEffect } from "react";
 
 const KotaLamaPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <KotaLamaLayout>
       <div className="sm:flex mt-12 sm:grid sm:gap-4 sm:grid-cols-2">

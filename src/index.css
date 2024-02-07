@@ -1,9 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* Di dalam file CSS Anda */
+
+body {
+  font-family: "Poppins", sans-serif !important;
+}
 
 .popup-container {
   position: fixed;
@@ -45,6 +50,16 @@
   right: 10px;
   cursor: pointer;
   color: white;
+}
+
+.header-content {
+  min-height: 60vh;
+  margin-top: -6rem;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 576px) {
