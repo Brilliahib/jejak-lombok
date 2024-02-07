@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/"
+    },
+    {
+      "src": "/destinasi",
+      "dest": "/"
+    },
+    {
+      "src": "/get-to-know/saloka-park",
+      "dest": "/"
+    },
+    {
+      "src": "/get-to-know/kota-lama",
+      "dest": "/"
+    },
+    {
+      "src": "/get-to-know/candi-gedong-songo",
+      "dest": "/"
+    },
+    {
+      "src": "/get-to-know/sampokong",
+      "dest": "/"
+    }
+  ]
+}
