@@ -9,7 +9,7 @@ function Card({ imageUrl, title, description, mt, onClick }) {
     >
       <img src={imageUrl} alt="Card" className="card-image rounded-xl" />
       <div className="card-content">
-        <p className="font-bold text-lg my-3">{title}</p>
+        <p className="font-semibold text-base my-3">{title}</p>
         <p className="text-justify text-[#6F6F6F]">{description}</p>
       </div>
     </div>
