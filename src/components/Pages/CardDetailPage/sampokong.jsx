@@ -16,7 +16,7 @@ const SampokongPage = () => {
         </div>
         <div className="mt-4 sm:mt-0">
           <p className="leading-loose">
-            TKalau kamu ingin berwisata sejarah di Semarang, maka Kelenteng Sam
+            Kalau kamu ingin berwisata sejarah di Semarang, maka Kelenteng Sam
             Poo Kong adalah tujuan yang tepat. Sebagai tempat ibadah untuk para
             penganut kepercayaan tradisional Tionghoa, Sam Poo Kong tampak
             begitu menarik.

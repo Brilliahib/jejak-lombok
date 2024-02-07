@@ -17,7 +17,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/destination",
-    element: <DestinationPage />,
+    element: <DestinationPage></DestinationPage>,
   },
   {
     path: "/get-to-know/saloka-park",
