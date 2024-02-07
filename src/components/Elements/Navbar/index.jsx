@@ -1,11 +1,12 @@
 import { Fragment, useState, useEffect } from "react";
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Logo from "../../../assets/img/JEJAK_LOGO.png";
 
 const navigation = [
   { name: "Home", href: "/", current: false },
   { name: "About", href: "#", current: false },
-  { name: "Destination", href: "#", current: false },
+  { name: "Destination", href: "/destination", current: false },
   { name: "Chat", href: "#", current: false },
 ];
 
@@ -55,11 +56,7 @@ export default function Navbar() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
                 <div className="flex flex-shrink-0 items-center">
-                  <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                    alt="Your Company"
-                  />
+                  <img className="h-8 w-auto" src={Logo} alt="Your Company" />
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">

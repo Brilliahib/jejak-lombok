@@ -8,11 +8,16 @@ import SalokaPage from "./components/Pages/CardDetailPage/saloka.jsx";
 import GedongSongoPage from "./components/Pages/CardDetailPage/gedongsongo.jsx";
 import KotaLamaPage from "./components/Pages/CardDetailPage/kotalama.jsx";
 import SampokongPage from "./components/Pages/CardDetailPage/sampokong.jsx";
+import DestinationPage from "./components/Pages/destination.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <HomePage></HomePage>,
+  },
+  {
+    path: "/destination",
+    element: <DestinationPage />,
   },
   {
     path: "/get-to-know/saloka-park",
