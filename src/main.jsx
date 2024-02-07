@@ -14,7 +14,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/destination" element={<DestinationPage />} />
+        <Route path="/destinasi" element={<DestinationPage />} />
         <Route path="/get-to-know/saloka-park" element={<SalokaPage />} />
         <Route
           path="/get-to-know/candi-gedong-songo"
