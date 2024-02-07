@@ -1,6 +1,6 @@
 import { Fragment, useState, useEffect } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Disclosure } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
   { name: "Home", href: "/", current: false },
@@ -32,14 +32,10 @@ export default function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className={`bg-${
-        isScrolled ? "white" : "transparent"
-      } sticky top-0 transition-all`}
-      style={{
-        zIndex: 1000,
-        paddingTop: isScrolled ? 0 : "30px",
-        color: "#fff",
-      }}
+      className={`sticky top-0 transition-all ${
+        isScrolled ? "bg-white text-slate-900" : "bg-transparent text-white"
+      }`}
+      style={{ zIndex: 1000, paddingTop: isScrolled ? 0 : "30px" }}
     >
       {({ open }) => (
         <>
@@ -76,7 +72,7 @@ export default function Navbar() {
                             ? "bg-gray-900 text-white"
                             : "text-gray-300 hover:bg-gray-700 hover:text-white",
                           "rounded-md px-3 py-2 text-sm font-medium",
-                          isScrolled ? "text-slate-900" : "text-white"
+                          isScrolled && "text-slate-900" // Add this condition
                         )}
                         aria-current={item.current ? "page" : undefined}
                       >
@@ -101,7 +97,7 @@ export default function Navbar() {
                       ? "bg-gray-900 text-white"
                       : "text-gray-300 hover:bg-gray-700 hover:text-white",
                     "block rounded-md px-3 py-2 text-base font-medium",
-                    isScrolled ? "text-slate-900" : "text-white"
+                    isScrolled && "text-slate-900" // Add this condition
                   )}
                   aria-current={item.current ? "page" : undefined}
                 >
