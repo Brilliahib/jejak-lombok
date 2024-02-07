@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Card from "../Card";
+import { Link } from "react-router-dom";
 
 export default () => {
   const cardsData = [
@@ -10,7 +11,6 @@ export default () => {
       title: "Candi Gedong Songo",
       description:
         "Tempat wisata di Semarang yang lagi hits dan harganya ini menjadi wisata alam sekaligus wisata sejarah. Sebab, Candi Gedong Songo terletak di kaki Gunung Ungaran dengan ketinggian 1200 mdpl. Dengan ketinggian tersebut, para wisatawan bisa menikmati udara sejuk sekaligus panorama alam yang menawan. ",
-      destination: "get-to-know/candi-gedong-songo",
     },
     {
       imageUrl:
@@ -18,7 +18,6 @@ export default () => {
       title: "Kota Lama",
       description:
         "Tempat wisata di Semarang yang lagi hits dan harganya pertama adalah Kota Lama Semarang. Destinasi pertama ini merupakan kawasan cagar budaya tempat gedung-gedung tua peninggalan Hindia Belanda ratusan tahun yang lalu. Arsitektur gedung di kawasan Kota Lama bergaya khas Eropa yang cocok sebagai tempat foto yang instagramable. ",
-      destination: "get-to-know/kota-lama",
     },
     {
       imageUrl:
@@ -26,7 +25,6 @@ export default () => {
       title: "Sampokong",
       description:
         "Kalau kamu ingin berwisata sejarah di Semarang, maka Kelenteng Sam Poo Kong adalah tujuan yang tepat. Sebagai tempat ibadah untuk para penganut kepercayaan tradisional Tionghoa, Sam Poo Kong tampak begitu menarik. Sebab, bangunan kelenteng tersebut dibuat dengan arsitektur khas Cina yang dipadukan dengan budaya Jawa.",
-      destination: "get-to-know/sampokong",
     },
     {
       imageUrl:
@@ -34,7 +32,6 @@ export default () => {
       title: "Saloka Theme Park",
       description:
         "Cocok untuk anak-anak, Saloka Theme Park merupakan tempat rekreasi yang menyediakan aneka wahana. Mengusung konsep kearifan lokal, Saloka didirikan di atas lahan seluas 12 hektare. Total wahana di tempat ini ada 25 wahana yang terbagi menjadi 5 zona permainan.",
-      destination: "get-to-know/saloka-park",
     },
     // Tambahkan card lainnya di sini jika diperlukan
   ];
@@ -64,12 +61,9 @@ export default () => {
       >
         {cardsData.map((card, index) => (
           <SwiperSlide key={index}>
-            <Card
-              imageUrl={card.imageUrl}
-              title={card.title}
-              description={card.description}
-              destination={card.destination}
-            />
+            <Link to="/destinasi">
+              <Card imageUrl={card.imageUrl} title={card.title} />
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>

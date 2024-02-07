@@ -21,7 +21,8 @@ const Jumbotron = () => {
       </video>
       <div className="jumbotron-content relative z-10">
         <h1 className="text-6xl font-black text-white text-center drop-shadow-md">
-          Explore Semarang
+          Explore <br />
+          Semarang
         </h1>
       </div>
     </div>
