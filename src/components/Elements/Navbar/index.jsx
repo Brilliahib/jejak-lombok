@@ -66,8 +66,8 @@ export default function Navbar() {
                         href={item.href}
                         className={classNames(
                           item.current
-                            ? "bg-green-900 text-white"
-                            : "text-gray-300 hover:bg-green-700 hover:text-white",
+                            ? "bg-sky-900 text-white"
+                            : "text-gray-300 hover:bg-sky-700 hover:text-white",
                           "rounded-md px-3 py-2 text-sm font-medium",
                           isScrolled && "text-slate-900" // Add this condition
                         )}

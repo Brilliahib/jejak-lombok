@@ -2,36 +2,26 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Card from "../Card";
 import { Link } from "react-router-dom";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
 
 export default () => {
   const cardsData = [
     {
       imageUrl:
-        "https://1.bp.blogspot.com/-FqVl7Vo_MB8/XUci97z17GI/AAAAAAAACS0/ia8p-W-weZUGNEKkQ7n8J_ekUVAQ2nfCQCLcBGAs/s1600/harga-tiket-masuk-wisata-candi-gedong-songo-terbaru-2019.jpg",
-      title: "Candi Gedong Songo",
-      description:
-        "Tempat wisata di Semarang yang lagi hits dan harganya ini menjadi wisata alam sekaligus wisata sejarah. Sebab, Candi Gedong Songo terletak di kaki Gunung Ungaran dengan ketinggian 1200 mdpl. Dengan ketinggian tersebut, para wisatawan bisa menikmati udara sejuk sekaligus panorama alam yang menawan. ",
+        "https://images.unsplash.com/photo-1594235206666-19245d362ffa?q=80&w=2013&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       imageUrl:
-        "https://image.popbela.com/content-images/post/20221231/a2093aad5ef62c094359423bbc9997c5.png?width=1600&format=webp&w=1600",
-      title: "Kota Lama",
-      description:
-        "Tempat wisata di Semarang yang lagi hits dan harganya pertama adalah Kota Lama Semarang. Destinasi pertama ini merupakan kawasan cagar budaya tempat gedung-gedung tua peninggalan Hindia Belanda ratusan tahun yang lalu. Arsitektur gedung di kawasan Kota Lama bergaya khas Eropa yang cocok sebagai tempat foto yang instagramable. ",
+        "https://images.unsplash.com/photo-1570971839591-9934cad91963?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       imageUrl:
-        "https://wisatasekolah.com/wp-content/uploads/2019/03/wisata-edukasi-semarang.jpg",
-      title: "Sampokong",
-      description:
-        "Kalau kamu ingin berwisata sejarah di Semarang, maka Kelenteng Sam Poo Kong adalah tujuan yang tepat. Sebagai tempat ibadah untuk para penganut kepercayaan tradisional Tionghoa, Sam Poo Kong tampak begitu menarik. Sebab, bangunan kelenteng tersebut dibuat dengan arsitektur khas Cina yang dipadukan dengan budaya Jawa.",
+        "https://www.laughtraveleat.com/wp-content/uploads/2023/01/east-coast-gili-trawangan-lombok-indonesia-laugh-travel-eat.jpg",
     },
     {
       imageUrl:
-        "https://image.popbela.com/content-images/post/20221231/aeb4887bbe72abfa998025495ac9d7bd.png?width=1600&format=webp&w=1600",
-      title: "Saloka Theme Park",
-      description:
-        "Cocok untuk anak-anak, Saloka Theme Park merupakan tempat rekreasi yang menyediakan aneka wahana. Mengusung konsep kearifan lokal, Saloka didirikan di atas lahan seluas 12 hektare. Total wahana di tempat ini ada 25 wahana yang terbagi menjadi 5 zona permainan.",
+        "https://images.unsplash.com/photo-1581775231124-4f70b143b85c?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     // Tambahkan card lainnya di sini jika diperlukan
   ];
@@ -58,6 +48,11 @@ export default () => {
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
         style={{ zIndex: 0 }}
+        pagination={{
+          dynamicBullets: true,
+        }}
+        modules={[Pagination]}
+        className="mySwiper"
       >
         {cardsData.map((card, index) => (
           <SwiperSlide key={index}>
