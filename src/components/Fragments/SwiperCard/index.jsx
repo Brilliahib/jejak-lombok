@@ -38,7 +38,7 @@ export default () => {
   return (
     <div style={{ maxWidth: "100%", overflowX: "hidden", zIndex: 0 }}>
       <Swiper
-        spaceBetween={50}
+        spaceBetween={20}
         slidesPerView={1.25}
         breakpoints={{
           // Breakpoints for responsive design
@@ -48,11 +48,11 @@ export default () => {
           },
           768: {
             slidesPerView: 2,
-            spaceBetween: 30,
+            spaceBetween: 20,
           },
           1024: {
             slidesPerView: 3.5,
-            spaceBetween: 40,
+            spaceBetween: 30,
           },
         }}
         onSlideChange={() => console.log("slide change")}
