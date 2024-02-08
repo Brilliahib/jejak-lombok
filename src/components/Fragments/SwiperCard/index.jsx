@@ -4,27 +4,12 @@ import Card from "../Card";
 import { Link } from "react-router-dom";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
+import cardsData from "../../Layouts/DestinationSection/cardData.json"; // Mengimpor data dari file JSON
 
 export default () => {
-  const cardsData = [
-    {
-      imageUrl:
-        "https://images.unsplash.com/photo-1594235206666-19245d362ffa?q=80&w=2013&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      imageUrl:
-        "https://images.unsplash.com/photo-1570971839591-9934cad91963?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      imageUrl:
-        "https://www.laughtraveleat.com/wp-content/uploads/2023/01/east-coast-gili-trawangan-lombok-indonesia-laugh-travel-eat.jpg",
-    },
-    {
-      imageUrl:
-        "https://images.unsplash.com/photo-1581775231124-4f70b143b85c?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    // Tambahkan card lainnya di sini jika diperlukan
-  ];
+  // Mengambil 4 data pertama dari cardsData
+  const limitedData = cardsData.slice(0, 5);
+
   return (
     <div style={{ maxWidth: "100%", overflowX: "hidden", zIndex: 0 }}>
       <Swiper
@@ -41,7 +26,7 @@ export default () => {
             spaceBetween: 20,
           },
           1024: {
-            slidesPerView: 3.5,
+            slidesPerView: 3,
             spaceBetween: 30,
           },
         }}
@@ -52,12 +37,16 @@ export default () => {
           dynamicBullets: true,
         }}
         modules={[Pagination]}
-        className="mySwiper"
+        className="mySwiper rounded-xl"
       >
-        {cardsData.map((card, index) => (
-          <SwiperSlide key={index}>
-            <Link to="/destinasi">
-              <Card imageUrl={card.imageUrl} title={card.title} />
+        {limitedData.map((card, index) => (
+          <SwiperSlide key={index} className="rounded-xl">
+            <Link to="/destinasi" className="rounded-xl">
+              <Card
+                imageUrl={card.imageUrl}
+                title={card.title}
+                style={{ textAlign: "left", backgroundColor: "blue" }}
+              />
             </Link>
           </SwiperSlide>
         ))}

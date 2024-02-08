@@ -76,7 +76,7 @@ const DestinationLayout = () => {
                         style={{ border: 0 }}
                         allowFullScreen
                         loading="lazy"
-                        className=" z-100"
+                        className=" z-100 rounded-lg"
                       ></iframe>
                     </div>
                   </div>

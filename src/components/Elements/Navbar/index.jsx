@@ -34,7 +34,7 @@ export default function Navbar() {
     <Disclosure
       as="nav"
       className={`sticky top-0 transition-all ${
-        isScrolled ? "bg-white text-slate-900" : "bg-transparent text-white"
+        isScrolled ? "bg-white text-slate-900" : "text-slate-900"
       }`}
       style={{ zIndex: 999, paddingTop: isScrolled ? 0 : "30px" }}
     >
@@ -67,7 +67,7 @@ export default function Navbar() {
                         className={classNames(
                           item.current
                             ? "bg-sky-900 text-white"
-                            : "text-gray-300 hover:bg-sky-700 hover:text-white",
+                            : "text-slate-900 hover:bg-sky-700 hover:text-white",
                           "rounded-md px-3 py-2 text-sm font-medium",
                           isScrolled && "text-slate-900" // Add this condition
                         )}
@@ -92,7 +92,7 @@ export default function Navbar() {
                   className={classNames(
                     item.current
                       ? "bg-gray-900 text-white"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                      : "text-slate-900 hover:bg-gray-700 hover:text-white",
                     "block rounded-md px-3 py-2 text-base font-medium",
                     isScrolled && "text-slate-900" // Add this condition
                   )}
