@@ -1,3 +1,5 @@
+import Button from "../../Elements/Button";
+
 const OrganizeTripSection = () => {
   return (
     <div className="bg-sky-950">
@@ -7,12 +9,13 @@ const OrganizeTripSection = () => {
             <h1 className="text-4xl font-black leading-tight mb-8 tracking-wide">
               We Organize Your Trip
             </h1>
-            <p className="leading-loose">
+            <p className="leading-loose mb-8">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus
               laboriosam, aut soluta pariatur excepturi, neque ducimus numquam
               incidunt iusto dignissimos officiis voluptatem a eos esse quas
               nostrum odio libero id.
             </p>
+            <Button to="/destinasi">About Us</Button>
           </div>
           <div>
             <img

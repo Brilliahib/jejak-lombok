@@ -42,11 +42,7 @@ export default () => {
         {limitedData.map((card, index) => (
           <SwiperSlide key={index} className="rounded-xl">
             <Link to="/destinasi" className="rounded-xl">
-              <Card
-                imageUrl={card.imageUrl}
-                title={card.title}
-                style={{ textAlign: "left", backgroundColor: "blue" }}
-              />
+              <Card imageUrl={card.imageUrl} title={card.title} />
             </Link>
           </SwiperSlide>
         ))}

@@ -20,7 +20,7 @@ const DestinationLayout = () => {
     setShowPopup(false);
   };
   return (
-    <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8 mt-24">
+    <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8 sm:mt-24 mt-12">
       <h1 className="font-extrabold text-3xl sm:text-4xl text-center mb-12 sm:mb-24">
         Rekomendasi <br />
         Destinasi Wisata

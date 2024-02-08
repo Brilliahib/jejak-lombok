@@ -117,15 +117,6 @@ body {
   .header-content {
     min-height: 30vh;
   }
-  /* .jumbotron {
-    background-image: url(https://images.unsplash.com/photo-1600790314350-3925299bab61?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-    margin-top: -6.5rem;
-    background-position: center;
-    background-size: cover;
-    min-height: 101vh;
-    display: flex;
-    align-items: center;
-  } */
   .jumbotron h1 {
     color: #000;
     text-align: center;
@@ -133,7 +124,7 @@ body {
     font-weight: 900;
     line-height: 1.5;
   }
-  /* .jumbotron img {
+  .explore-heading button {
     display: none;
-  } */
+  }
 }

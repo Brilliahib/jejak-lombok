@@ -1,11 +1,15 @@
+import Button from "../../Elements/Button";
 import SwiperCard from "../../Fragments/SwiperCard";
 
 const ExploreSection = () => {
   return (
     <div className="mt-16 sm:mt-24 explore" style={{ marginTop: "-12rem" }}>
-      <h1 className="text-4xl font-black leading-tight mb-8 tracking-wide text-white">
-        Explore Popular Destination
-      </h1>
+      <div className="heading sm:flex sm:justify-between explore-heading">
+        <h1 className="text-4xl font-black leading-tight mb-8 tracking-wide text-white">
+          Explore Popular Destination
+        </h1>
+        <Button>See Details</Button>
+      </div>
       <SwiperCard></SwiperCard>
     </div>
   );
