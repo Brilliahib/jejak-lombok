@@ -33,44 +33,52 @@ const DestinationLayout = () => {
               imageUrl={card.imageUrl}
               onClick={() =>
                 handleCardClick(
-                  <div>
-                    <h6 className="font-bold text-2xl">{card.title}</h6>
-                    <img
-                      src={card.imageUrl}
-                      alt={card.title}
-                      className="popup-image mt-10 rounded-xl mb-4"
-                    />
-                    <div className="flex items-center mb-4">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth="1.5"
-                        stroke="currentColor"
-                        className="w-8 h-8 text-sky-700 mr-2"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                        />
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
-                        />
-                      </svg>
-                      <p className="text-[#6F6F6F]">{card.description}</p>
+                  <div className="sm:flex sm:grid sm:grid-cols-2 sm:gap-x-12">
+                    <div className="div-pop-img">
+                      <img
+                        src={card.imageUrl}
+                        alt={card.title}
+                        className="popup-image mt-10 rounded-xl mb-4 sm:m-0"
+                      />
                     </div>
+                    <div className="pop-content">
+                      <h6 className="font-bold text-xl text-left mb-4">
+                        {card.title}
+                      </h6>
+                      <div className="flex items-center mb-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth="1.5"
+                          stroke="currentColor"
+                          className="w-6 h-6 text-sky-700 mr-2"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                          />
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+                          />
+                        </svg>
+                        <p className="text-[#6F6F6F] text-sm">
+                          {card.description}
+                        </p>
+                      </div>
 
-                    <iframe
-                      src={card.mapsUrl}
-                      width="100%"
-                      style={{ border: 0 }}
-                      allowFullScreen
-                      loading="lazy"
-                      className=" z-100"
-                    ></iframe>
+                      <iframe
+                        src={card.mapsUrl}
+                        width="100%"
+                        style={{ border: 0 }}
+                        allowFullScreen
+                        loading="lazy"
+                        className=" z-100"
+                      ></iframe>
+                    </div>
                   </div>
                 )
               }

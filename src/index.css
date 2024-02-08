@@ -30,11 +30,12 @@ body {
 .popup {
   position: relative;
   background-color: white;
-  width: 60%; /* Sesuaikan lebar pop-up sesuai kebutuhan */
-  max-width: 600px; /* Lebar maksimum pop-up */
+  width: 100%;
+  max-width: 90%;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan untuk efek pop-up */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  z-index: 10000;
 }
 
 .popup-content {
@@ -42,9 +43,9 @@ body {
 }
 
 .close {
-  background-color: red;
+  background-color: rgb(3 105 161);
   position: absolute;
-  padding: 6px 10px;
+  padding: 6px 12px;
   border-radius: 6px;
   top: 10px;
   right: 10px;

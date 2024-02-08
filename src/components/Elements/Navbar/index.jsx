@@ -1,7 +1,7 @@
 import { Fragment, useState, useEffect } from "react";
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import Logo from "../../../assets/img/JEJAK_LOGO.png";
+import Logo from "../../../assets/img/JEJAK_LOMBOK.png";
 
 const navigation = [
   { name: "Beranda", href: "/", current: false },
@@ -36,7 +36,7 @@ export default function Navbar() {
       className={`sticky top-0 transition-all ${
         isScrolled ? "bg-white text-slate-900" : "bg-transparent text-white"
       }`}
-      style={{ zIndex: 1000, paddingTop: isScrolled ? 0 : "30px" }}
+      style={{ zIndex: 999, paddingTop: isScrolled ? 0 : "30px" }}
     >
       {({ open }) => (
         <>
