@@ -51,6 +51,8 @@ const Chatbot = () => {
       botResponse = messagesData.destinasi;
     } else if (lowercaseInput.includes("makanan")) {
       botResponse = messagesData.makanan;
+    } else if (lowercaseInput.includes("lombok")) {
+      botResponse = messagesData.lombok;
     } else if (
       lowercaseInput.includes("daki") ||
       lowercaseInput.includes("gunung")
