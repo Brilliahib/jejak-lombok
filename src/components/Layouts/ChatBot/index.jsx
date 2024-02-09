@@ -4,6 +4,7 @@ import messagesData from "./messages.json";
 const Chatbot = () => {
   const [messages, setMessages] = useState([]);
   const [inputText, setInputText] = useState("");
+  const [isBotTyping, setIsBotTyping] = useState(false);
   const messagesEndRef = useRef(null);
 
   useEffect(() => {
@@ -21,9 +22,15 @@ const Chatbot = () => {
   const handleSendMessage = () => {
     if (inputText.trim() !== "") {
       const userMessage = { text: inputText, fromUser: true };
-      const botMessage = generateBotResponse(inputText);
+      setMessages([...messages, userMessage]);
 
-      setMessages([...messages, userMessage, botMessage]);
+      setIsBotTyping(true); // Set isBotTyping to true when sending a message
+      setTimeout(() => {
+        const botMessage = generateBotResponse(inputText);
+        setMessages((prevMessages) => [...prevMessages, botMessage]);
+        setIsBotTyping(false); // Set isBotTyping to false when bot has responded
+      }, 1500);
+
       setInputText("");
     }
   };
@@ -83,14 +90,32 @@ const Chatbot = () => {
             <span
               className={`px-2 py-1 ${
                 message.fromUser
-                  ? "bg-blue-500 text-white rounded-lg rounded-lg"
-                  : "bg-gray-300 text-gray-800 rounded-lg rounded-lg"
+                  ? "bg-blue-500 text-white rounded-lg"
+                  : "bg-gray-300 text-gray-800 rounded-lg"
               } flex`}
             >
-              {message.text}
+              {message.fromUser ? (
+                message.text
+              ) : (
+                <>
+                  <TextAnimation text={message.text} />
+                </>
+              )}
             </span>
           </div>
         ))}
+        {/* Display loading spinner when isBotTyping is true */}
+        {isBotTyping && (
+          <div className="flex justify-start mb-2">
+            <div className="lds-ring">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <span className="ml-2">Loli Bot is typing...</span>
+          </div>
+        )}
         <div ref={messagesEndRef} />
       </div>
       <div className="p-4 border-t fixed bottom-0 left-0 right-0 lg:mx-40 rounded-lg mt-48">
@@ -111,13 +136,13 @@ const Chatbot = () => {
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              stroke-width="1.5"
+              strokeWidth="1.5"
               stroke="currentColor"
-              class="w-6 h-6"
+              className="w-6 h-6"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
               />
             </svg>
@@ -126,6 +151,23 @@ const Chatbot = () => {
       </div>
     </div>
   );
+};
+
+const TextAnimation = ({ text }) => {
+  const [displayText, setDisplayText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (currentIndex < text.length) {
+        setDisplayText((prevText) => prevText + text[currentIndex]);
+        setCurrentIndex((prevIndex) => prevIndex + 1);
+      }
+    }, 8);
+    return () => clearInterval(interval);
+  }, [currentIndex, text]);
+
+  return <span>{displayText}</span>;
 };
 
 export default Chatbot;
