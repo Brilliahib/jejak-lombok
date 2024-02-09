@@ -67,7 +67,10 @@ const Chatbot = () => {
 
   return (
     <div className="flex flex-col col-chat">
-      <div className="flex flex-col flex-grow p-4 bg-gray-100 border rounded-lg overflow-y-auto">
+      <div
+        className="flex flex-col flex-grow p-4 bg-gray-100 border rounded-lg overflow-y-auto"
+        style={{ maxHeight: "calc(100vh - 200px)" }}
+      >
         {messages.map((message, index) => (
           <div
             key={index}
