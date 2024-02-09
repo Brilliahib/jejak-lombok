@@ -107,6 +107,15 @@ body {
   min-height: 75vh;
 }
 
+.img-loli {
+  display: flex;
+  justify-content: center;
+}
+
+.img-loli img {
+  width: 350px;
+}
+
 @media (max-width: 576px) {
   html,
   body {
@@ -133,5 +142,11 @@ body {
   }
   .col-chat {
     min-height: 80vh;
+  }
+  .img-loli {
+    margin-bottom: 2rem;
+  }
+  .img-loli img {
+    width: 300px;
   }
 }
