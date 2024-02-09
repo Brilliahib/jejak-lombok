@@ -1,0 +1,8 @@
+{
+  "greeting": "Halo! Saya adalah Jejak Bot, Ada yang bisa saya bantu tentang Lombok?",
+  "destinasi": "Beberapa destinasi wisata populer di Lombok adalah:\n\n1. Gili Trawangan: Pulau kecil yang terkenal dengan pantainya yang indah dan kehidupan malamnya yang ramai.\n2. Pantai Kuta: Terkenal dengan pasir putihnya yang halus dan ombak yang cocok untuk berselancar.\n3. Air Terjun Sendang Gile: Air terjun spektakuler dengan kolam yang jernih dan suasana alam yang menyejukkan.",
+  "makanan": "Lombok juga terkenal dengan berbagai makanan lezat, seperti:\n\n1. Ayam Taliwang: Ayam bakar khas Lombok yang disajikan dengan sambal pedas.\n2. Plecing Kangkung: Sayuran kangkung yang disajikan dengan sambal tomat pedas.\n3. Sate Rembiga: Sate daging sapi khas Lombok dengan bumbu rembiga yang kaya rempah.",
+  "gunung": "Jika Anda suka mendaki, saya merekomendasikan Gunung Rinjani. Gunung ini memiliki pemandangan indah dan jalur pendakian yang menantang.",
+  "pantai": "Jika Anda ingin bersantai di pantai, Anda bisa mengunjungi Pantai Kuta. Pantai ini terkenal dengan pasir putihnya yang lembut dan ombaknya yang cocok untuk berselancar.",
+  "default": "Maaf, saya tidak mengerti pertanyaan Anda. Silakan tanyakan sesuatu tentang destinasi atau makanan di Lombok."
+}

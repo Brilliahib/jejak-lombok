@@ -103,6 +103,10 @@ body {
   right: 30px;
 }
 
+.col-chat {
+  min-height: 75vh;
+}
+
 @media (max-width: 576px) {
   html,
   body {
@@ -126,5 +130,8 @@ body {
   }
   .explore-heading button {
     display: none;
+  }
+  .col-chat {
+    min-height: 80vh;
   }
 }
