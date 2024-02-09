@@ -116,6 +116,10 @@ body {
   width: 350px;
 }
 
+.card-shop img {
+  height: 200px;
+}
+
 @media (max-width: 576px) {
   html,
   body {
@@ -148,5 +152,9 @@ body {
   }
   .img-loli img {
     width: 300px;
+  }
+  .card-shop img {
+    width: 100%;
+    height: 100%;
   }
 }
