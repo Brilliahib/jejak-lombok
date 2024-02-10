@@ -11,6 +11,11 @@ function truncateDescription(description) {
   }
 }
 
+function formatPrice(price) {
+  // Format harga menjadi angka desimal dengan pemisah ribuan dan dua digit di belakang koma
+  return price.toLocaleString("id-ID", { minimumFractionDigits: 2 });
+}
+
 function CardShop({ addToCart }) {
   const handleAddToCart = (item) => {
     // Panggil prop addToCart dengan item sebagai argumen
@@ -27,6 +32,9 @@ function CardShop({ addToCart }) {
           <img src={item.imageUrl} alt="" />
           <div className="bg-white p-4 rounded-t-xl">
             <p className="font-semibold text-base my-3">{item.title}</p>
+            <p className="text-slate-900 text-sm mb-2 font-bold">
+              Rp {item.price}
+            </p>
             <p
               className="leading-loose mb-4 text-[#6F6F6F] text-sm"
               style={{ marginBottom: "1rem" }}
