@@ -1,3 +1,4 @@
+// CardShop.jsx
 import React from "react";
 import Button from "../../Elements/Button";
 import CardShopData from "./CardShopData.json";
@@ -10,7 +11,12 @@ function truncateDescription(description) {
   }
 }
 
-function CardShop() {
+function CardShop({ addToCart }) {
+  const handleAddToCart = (item) => {
+    // Panggil prop addToCart dengan item sebagai argumen
+    addToCart(item);
+  };
+
   return (
     <div className="sm:grid sm:grid-cols-4 sm:gap-6">
       {CardShopData.map((item, index) => (
@@ -28,7 +34,13 @@ function CardShop() {
               {truncateDescription(item.description)}
             </p>
             <div className="sm:absolute sm:bottom-4 sm:left-4 sm:right-4">
-              <Button>Buy Now</Button>
+              {/* Menggunakan handleAddToCart saat tombol ditekan */}
+              <button
+                onClick={() => handleAddToCart(item)}
+                className="bg-sky-700 h-10 px-8 font-medium rounded-md text-white border border-transparent transition duration-300 hover:bg-white hover:border-sky-700 hover:text-sky-700"
+              >
+                Add to Cart
+              </button>
             </div>
           </div>
         </div>
