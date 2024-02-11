@@ -6,6 +6,7 @@ import HomePage from "./components/Pages/home.jsx";
 import DestinationPage from "./components/Pages/destination.jsx";
 import ChatBotPage from "./components/Pages/chat.jsx";
 import ShopPage from "./components/Pages/shop.jsx";
+import AboutPage from "./components/Pages/about.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -15,6 +16,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/destinasi" element={<DestinationPage />} />
         <Route path="/chat" element={<ChatBotPage />}></Route>
         <Route path="/shop" element={<ShopPage />}></Route>
+        <Route path="/about" element={<AboutPage />}></Route>
       </Routes>
     </Router>
   </React.StrictMode>

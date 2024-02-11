@@ -5,7 +5,7 @@ import Logo from "../../../assets/img/JEJAK_LOMBOK.png";
 
 const navigation = [
   { name: "Home", href: "/", current: false },
-  { name: "About", href: "#", current: false },
+  { name: "About", href: "/about", current: false },
   { name: "Destination", href: "/destinasi", current: false },
   { name: "Shop", href: "/shop", current: false },
   { name: "Chat", href: "/chat", current: false },
