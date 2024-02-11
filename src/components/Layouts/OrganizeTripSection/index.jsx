@@ -1,11 +1,18 @@
 import Button from "../../Elements/Button";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import React, { useEffect } from "react";
 
 const OrganizeTripSection = () => {
+  useEffect(() => {
+    AOS.init({ durattion: 2000 });
+  });
+
   return (
     <div className="bg-sky-900">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 py-24 text-white pb-80 px-8">
         <div className="block sm:flex sm:grid sm:grid-cols-2 sm:gap-12">
-          <div className="">
+          <div className="" data-aos="fade-right">
             <h1 className="text-4xl font-black leading-tight mb-8 tracking-wide">
               We Organize Your Trip
             </h1>
@@ -17,7 +24,7 @@ const OrganizeTripSection = () => {
             </p>
             <Button to="/destinasi">About Us</Button>
           </div>
-          <div>
+          <div data-aos="fade-left">
             <img
               src="https://images.unsplash.com/photo-1500207907633-4ccab9bf1535?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt=""

@@ -1,14 +1,20 @@
-import Logo from "../../../assets/img/JEJAK_LOMBOK.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import React, { useEffect } from "react";
 
 const OurWebSection = () => {
+  useEffect(() => {
+    AOS.init({ durattion: 2000 });
+  });
+
   return (
     <div>
       <div className="mx-auto max-w-7xl px-8 sm:px-6 lg:px-8 sm:mt-24 sm:my-48 my-24">
-        <div className="mb-16">
+        <div className="mb-16" data-aos="fade-right">
           <h1 className="text-4xl font-black text-center">Our Website</h1>
         </div>
         <div className="text-center">
-          <div>
+          <div data-aos="fade-left">
             <p className="leading-loose text-gray-600">
               Website Jejak Lombok merupakan platform yang menyajikan informasi
               lengkap tentang destinasi wisata di pulau Lombok. Dengan fitur
