@@ -1,3 +1,4 @@
+import Footer from "../Elements/Footer";
 import Navbar from "../Elements/Navbar";
 import DestinationLayout from "../Layouts/DestinationSection";
 
@@ -15,6 +16,7 @@ const DestinationPage = () => {
         }}
       ></div>
       <DestinationLayout />
+      <Footer />
     </div>
   );
 };

@@ -1,3 +1,4 @@
+import Footer from "../Elements/Footer";
 import Navbar from "../Elements/Navbar";
 import Chatbot from "../Layouts/ChatBot";
 

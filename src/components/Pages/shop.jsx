@@ -1,3 +1,4 @@
+import Footer from "../Elements/Footer";
 import Navbar from "../Elements/Navbar";
 import ShopLayout from "../Layouts/Shop";
 
@@ -15,6 +16,7 @@ const ShopPage = () => {
         }}
       ></div>
       <ShopLayout />
+      <Footer />
     </div>
   );
 };
