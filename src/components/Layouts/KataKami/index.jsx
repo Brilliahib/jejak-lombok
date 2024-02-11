@@ -14,14 +14,13 @@ const KataKamiSection = () => {
               style={{ filter: "grayscale(100%)" }}
             />
           </div>
-          <div>
+          <div className="">
             <ul className="leading-loose">
               <li className="text-6xl font-black">"</li>
-              <li className="mb-12">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Recusandae eveniet delectus quae incidunt obcaecati corrupti.
-                Nobis, ullam beatae. Molestiae culpa ipsum minus eveniet at
-                veritatis ratione nemo voluptatum sit saepe.
+              <li className="mb-12 text-lg">
+                Di balik layar, ada dunia yang terus berkembang dan ide-ide yang
+                tak pernah berhenti mengalir. Ada semangat yang membara dan
+                dedikasi yang tak tergoyahkan.
               </li>
               <li>
                 <h3 className="text-lg font-bold">

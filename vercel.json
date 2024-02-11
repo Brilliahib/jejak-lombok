@@ -15,6 +15,10 @@
     {
       "src": "/shop",
       "dest": "/"
+    },
+    {
+      "src": "/about",
+      "dest": "/"
     }
   ]
 }
