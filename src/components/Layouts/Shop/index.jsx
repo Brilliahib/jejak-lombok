@@ -1,9 +1,72 @@
 import React, { useState } from "react";
 import CardShop from "../../Fragments/CardShop";
+import { jsPDF } from "jspdf";
 
 const ShopLayout = () => {
   const [selectedItems, setSelectedItems] = useState([]);
   const [showPopup, setShowPopup] = useState(false);
+
+  const handleAction = () => {
+    if (selectedItems.length > 0) {
+      const pdfData = generatePDFData();
+      openPDF(pdfData);
+    }
+  };
+
+  const generatePDFData = () => {
+    const doc = new jsPDF();
+    doc.addFont(
+      "https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff",
+      "Poppins",
+      "normal"
+    );
+
+    doc.setFont("Poppins", "bold");
+    doc.setFontSize(20);
+    doc.text(
+      "Pembayaran Jejak Lombok Merchandise",
+      105,
+      10,
+      null,
+      null,
+      "center"
+    );
+
+    doc.setFontSize(20);
+    doc.text("Total Pembayaran", 105, 30, null, null, "center");
+
+    doc.setFontSize(14);
+    doc.text(
+      `Total Harga: Rp ${calculateTotalPrice()}`,
+      105,
+      50,
+      null,
+      null,
+      "center"
+    );
+
+    // Panduan pembayaran
+    doc.setFontSize(14);
+    doc.text("Panduan Pembayaran:", 20, 70);
+    doc.setFontSize(12);
+    doc.text("1. Bayar di Indomaret", 20, 80);
+    doc.text("2. Transfer Bank BRI:", 20, 90);
+    doc.text("   - No. Rekening: XXX-XXXX-XXXX", 30, 100);
+    doc.text("   - Nama Penerima: Jejak Lombok Merchandise", 30, 110);
+    doc.text("3. Transfer ke bank lainnya:", 20, 120);
+    doc.text("   - Gunakan transfer antar bank atau ATM", 30, 130);
+    doc.text("   - Input data penerima sesuai bank tujuan", 30, 140);
+    doc.text("4. Pembayaran di outlet resmi:", 20, 150);
+    doc.text("   - Kunjungi outlet resmi Jejak Lombok Merchandise", 30, 160);
+
+    return doc.output();
+  };
+
+  const openPDF = (pdfData) => {
+    const blob = new Blob([pdfData], { type: "application/pdf" });
+    const url = URL.createObjectURL(blob);
+    window.open(url);
+  };
 
   const addToCart = (item) => {
     const existingItemIndex = selectedItems.findIndex(
@@ -146,6 +209,18 @@ const ShopLayout = () => {
               <p className="text-lg font-semibold">
                 Total Harga: Rp {calculateTotalPrice()}
               </p>
+            </div>
+            <div className="flex justify-end mt-8">
+              <button
+                onClick={handleAction}
+                className={`bg-${
+                  selectedItems.length > 0 ? "sky" : "green"
+                }-700 text-white px-4 py-2 rounded-md`}
+              >
+                {selectedItems.length > 0
+                  ? "Bayar Sekarang (PDF)"
+                  : "Bayar Sekarang"}
+              </button>
             </div>
           </div>
         </div>
