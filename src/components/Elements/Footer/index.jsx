@@ -2,13 +2,21 @@ import Logo from "../../../assets/img/JEJAK_LOMBOK.png";
 
 const Footer = () => {
   return (
-    <div className="bg-sky-950 text-white sm:mt-24 mt-12">
+    <div className="bg-sky-900 text-white sm:mt-24 mt-12">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 px-8 py-12">
-        <div className="sm:flex sm:grid sm:grid-cols-3 sm:gap-4">
-          <div>
-            <img src={Logo} alt="" width={100} />
+        <div className="sm:flex sm:grid sm:grid-cols-3 sm:gap-4 justify-between">
+          <div className="sm:mb-0 mb-8">
+            <h3 className="font-black text-xl mb-4">JEJAK LOMBOK</h3>
+            <p>"Discover Lombok: Where Tradition Meets Technology!"</p>
           </div>
-          <div className="mt-12 sm:mt-0">
+          <div className="sm:mb-0 mb-8">
+            <h1 className="mb-4 font-bold">Contact</h1>
+            <ul className="leading-loose">
+              <li>+62812345678</li>
+              <li>jejaklombok@gmail.com</li>
+            </ul>
+          </div>
+          <div>
             <h1 className="mb-4 font-bold">Link</h1>
             <ul className="leading-loose">
               <li>
@@ -26,13 +34,6 @@ const Footer = () => {
               <li>
                 <a href="/chat">Chat</a>
               </li>
-            </ul>
-          </div>
-          <div className="mt-12 sm:mt-0">
-            <h1 className="mb-4 font-bold">Contact</h1>
-            <ul className="leading-loose">
-              <li>+62812345678</li>
-              <li>jejaklombok@gmail.com</li>
             </ul>
           </div>
         </div>
