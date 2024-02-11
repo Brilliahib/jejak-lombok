@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import CardShop from "../../Fragments/CardShop";
 import { jsPDF } from "jspdf";
 
@@ -144,82 +145,94 @@ const ShopLayout = () => {
           </div>
         )}
       </div>
-      {showPopup && (
-        <div className="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-75 flex items-center justify-center px-6 sm:px-0">
-          <div
-            className="bg-white p-8 rounded-lg relative"
-            style={{ width: 800, maxHeight: "80vh", overflowY: "auto" }}
+      <AnimatePresence>
+        {showPopup && (
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 50 }}
+            transition={{ duration: 0.3 }}
+            className="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-75 flex items-center justify-center px-6 sm:px-0"
           >
-            <button
-              className="absolute top-4 right-4 bg-red-500 text-white rounded-full w-8 h-8 flex items-center justify-center"
-              onClick={() => setShowPopup(false)}
+            <motion.div
+              initial={{ scale: 0.5, y: "100%" }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.5, y: "100%" }}
+              transition={{ duration: 0.3 }}
+              className="bg-white p-8 rounded-lg relative"
+              style={{ width: 800, maxHeight: "80vh", overflowY: "auto" }}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                className="w-4 h-4"
+              <button
+                className="absolute top-4 right-4 bg-red-500 text-white rounded-full w-8 h-8 flex items-center justify-center"
+                onClick={() => setShowPopup(false)}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-            {selectedItems.map((selectedItem) => (
-              <div key={selectedItem.id} className="flex items-start mb-4">
-                <img
-                  src={selectedItem.imageUrl}
-                  alt={selectedItem.title}
-                  className="rounded-lg mr-4"
-                  width={100}
-                />
-                <div>
-                  <h2 className="text-xl font-semibold mb-2">
-                    {selectedItem.title}
-                  </h2>
-                  <p>Jumlah: {selectedItem.quantity}</p>
-                  <p>Rp {selectedItem.price}</p>
-                  <div className="flex items-center mt-2">
-                    <button
-                      className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center mr-2"
-                      onClick={() => decreaseQuantity(selectedItem.id)}
-                    >
-                      -
-                    </button>
-                    <button
-                      className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center"
-                      onClick={() => increaseQuantity(selectedItem.id)}
-                    >
-                      +
-                    </button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  className="w-4 h-4"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+              {selectedItems.map((selectedItem) => (
+                <div key={selectedItem.id} className="flex items-start mb-4">
+                  <img
+                    src={selectedItem.imageUrl}
+                    alt={selectedItem.title}
+                    className="rounded-lg mr-4"
+                    width={100}
+                  />
+                  <div>
+                    <h2 className="text-xl font-semibold mb-2">
+                      {selectedItem.title}
+                    </h2>
+                    <p>Jumlah: {selectedItem.quantity}</p>
+                    <p>Rp {selectedItem.price}</p>
+                    <div className="flex items-center mt-2">
+                      <button
+                        className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center mr-2"
+                        onClick={() => decreaseQuantity(selectedItem.id)}
+                      >
+                        -
+                      </button>
+                      <button
+                        className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center"
+                        onClick={() => increaseQuantity(selectedItem.id)}
+                      >
+                        +
+                      </button>
+                    </div>
                   </div>
                 </div>
+              ))}
+              <div className="mt-4 border-t pt-4">
+                <p className="text-lg font-semibold">
+                  Total Harga: Rp {calculateTotalPrice()}
+                </p>
               </div>
-            ))}
-            <div className="mt-4 border-t pt-4">
-              <p className="text-lg font-semibold">
-                Total Harga: Rp {calculateTotalPrice()}
-              </p>
-            </div>
-            <div className="flex justify-end mt-8">
-              <button
-                onClick={handleAction}
-                className={`bg-${
-                  selectedItems.length > 0 ? "sky" : "green"
-                }-700 text-white px-4 py-2 rounded-md`}
-              >
-                {selectedItems.length > 0
-                  ? "Bayar Sekarang (PDF)"
-                  : "Bayar Sekarang"}
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+              <div className="flex justify-end mt-8">
+                <button
+                  onClick={handleAction}
+                  className={`bg-${
+                    selectedItems.length > 0 ? "sky" : "green"
+                  }-700 text-white px-4 py-2 rounded-md`}
+                >
+                  {selectedItems.length > 0
+                    ? "Bayar Sekarang (PDF)"
+                    : "Bayar Sekarang"}
+                </button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

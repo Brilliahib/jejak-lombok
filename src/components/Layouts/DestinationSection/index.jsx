@@ -1,24 +1,17 @@
 import Card from "../../Fragments/Card";
 import React, { useState, useEffect, useRef } from "react";
 import cardData from "../DestinationSection/cardData.json";
+import { motion, AnimatePresence } from "framer-motion";
 
 const DestinationLayout = () => {
-  const popupRef = useRef(null);
   const [showPopup, setShowPopup] = useState(false);
   const [popupContent, setPopupContent] = useState(null);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   const handleCardClick = (content) => {
     setPopupContent(content);
     setShowPopup(true);
   };
 
-  const handleClosePopup = () => {
-    setShowPopup(false);
-  };
   return (
     <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8 sm:mt-24 mt-12">
       <h1 className="font-extrabold text-3xl sm:text-4xl text-center mb-12 sm:mb-24">
@@ -87,19 +80,32 @@ const DestinationLayout = () => {
           ))}
         </div>
       </div>
-      {showPopup && (
-        <div className="popup-container">
-          <div
-            className="popup"
-            style={{ maxHeight: "80vh", overflowY: "auto" }}
+      <AnimatePresence>
+        {showPopup && (
+          <motion.div
+            className="popup-container"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
           >
-            <span className="close" onClick={handleClosePopup}>
-              &times;
-            </span>
-            <div className="popup-content">{popupContent}</div>
-          </div>
-        </div>
-      )}
+            <motion.div
+              className="popup"
+              style={{ maxHeight: "80vh", overflowY: "auto" }}
+              initial={{ y: "100vh", scale: 0.5 }}
+              animate={{ y: 0, scale: 1 }}
+              exit={{ y: "100vh", scale: 0.5 }}
+              transition={{ duration: 0.3 }}
+            >
+              <span className="close" onClick={() => setShowPopup(false)}>
+                &times;
+              </span>
+
+              <div className="popup-content">{popupContent}</div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
