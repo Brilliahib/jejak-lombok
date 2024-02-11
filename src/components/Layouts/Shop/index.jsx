@@ -15,14 +15,9 @@ const ShopLayout = () => {
 
   const generatePDFData = () => {
     const doc = new jsPDF();
-    doc.addFont(
-      "https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff",
-      "Poppins",
-      "normal"
-    );
 
-    doc.setFont("Poppins", "bold");
-    doc.setFontSize(20);
+    doc.setFont("courier");
+    doc.setFontSize(12);
     doc.text(
       "Pembayaran Jejak Lombok Merchandise",
       105,
