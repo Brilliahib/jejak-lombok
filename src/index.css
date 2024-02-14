@@ -123,10 +123,12 @@ body {
 
 .swiper-pagination-bullet-active {
   background-color: rgb(3 105 161) !important;
+  width: 30px !important;
+  border-radius: 200px !important;
 }
 
 .swiper-slide {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .search-container {
@@ -173,9 +175,13 @@ body {
     height: 100%;
   }
   .search-bar {
-    margin-top: -5rem !important;
+    margin-top: -4.75rem !important;
   }
   .search-container {
-    padding: 9px;
+    padding: 6.5px;
+  }
+  .swiper-pagination-bullet-active {
+    width: 25px !important;
+    border-radius: 100px !important;
   }
 }

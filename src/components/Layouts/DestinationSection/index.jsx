@@ -30,9 +30,9 @@ const DestinationLayout = () => {
     <div className="mx-auto max-w-7xl px-8 sm:px-6 lg:px-8 sm:mt-24 mt-12">
       <div
         className="flex justify-center search-bar"
-        style={{ marginTop: "-8.5rem" }}
+        style={{ marginTop: "-8rem" }}
       >
-        <div className="bg-white shadow-md p-4 rounded-xl search-container">
+        <div className="bg-white shadow-md p-3 rounded-xl search-container">
           <SearchBar placeholder="Search..." handleChange={handleChange} />
         </div>
       </div>

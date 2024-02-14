@@ -35,7 +35,6 @@ export default () => {
         style={{ zIndex: 0 }}
         pagination={{
           clickable: true,
-          dynamicBullets: true,
         }}
         modules={[Pagination]}
         className="mySwiper rounded-xl"

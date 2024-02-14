@@ -27,10 +27,10 @@ function CardShop({ addToCart }) {
       {CardShopData.map((item, index) => (
         <div
           key={index}
-          className="relative rounded-xl shadow-xl card-shop h-auto sm:mb-0 mb-12"
+          className="relative rounded-xl shadow-md card-shop h-auto sm:mb-0 mb-12"
         >
-          <img src={item.imageUrl} alt="" />
-          <div className="bg-white p-4 rounded-t-xl">
+          <img src={item.imageUrl} alt="" className="rounded-t-xl" />
+          <div className="bg-white p-4 rounded-xl">
             <p className="font-semibold text-base my-3">{item.title}</p>
             <p className="text-slate-900 text-sm mb-2 font-bold">
               Rp {item.price}
