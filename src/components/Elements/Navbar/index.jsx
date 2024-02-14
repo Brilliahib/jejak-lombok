@@ -55,7 +55,7 @@ export default function Navbar() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-1 items-center px-3 sm:items-stretch sm:justify-between">
+              <div className="flex flex-1 items-center px-3 sm:px-0 sm:items-stretch sm:justify-between">
                 <a href="/" className="flex flex-shrink-0 items-center gap-4">
                   <img className="h-8 w-auto" src={Logo} alt="Your Company" />
                   <div>
