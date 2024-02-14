@@ -24,6 +24,8 @@ const DestinationLayout = () => {
             <Card
               key={index}
               imageUrl={card.imageUrl}
+              description={card.description}
+              title={card.title}
               onClick={() =>
                 handleCardClick(
                   <div className="sm:flex sm:grid sm:grid-cols-2 sm:gap-x-12">
