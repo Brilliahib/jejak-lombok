@@ -124,6 +124,14 @@ body {
   border: 0.1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
+.swiper-pagination-bullet-active {
+  background-color: rgb(3 105 161) !important;
+}
+
+.swiper-slide {
+  margin-bottom: 10px;
+}
+
 @media (max-width: 576px) {
   html,
   body {

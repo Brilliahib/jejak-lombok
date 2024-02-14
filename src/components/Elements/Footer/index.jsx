@@ -1,5 +1,3 @@
-import Logo from "../../../assets/img/JEJAK_LOMBOK.png";
-
 const Footer = () => {
   return (
     <div className="bg-sky-900 text-white sm:mt-24 mt-12">

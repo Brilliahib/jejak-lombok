@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Button = (props, to) => {
-  const { children, variant = "bg-sky-700" } = props;
+const Button = (props) => {
+  const { children, variant = "bg-sky-700", to } = props; // Mengakses props.to
   return (
     <Link to={to}>
       <button

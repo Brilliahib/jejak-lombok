@@ -1,7 +1,7 @@
 import { Fragment, useState, useEffect } from "react";
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import Logo from "../../../assets/img/JEJAK_LOMBOK.png";
+import Logo from "../../../assets/img/logo-notext.png";
 
 const navigation = [
   { name: "Home", href: "/", current: false },
@@ -56,9 +56,12 @@ export default function Navbar() {
                 </Disclosure.Button>
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
-                <div className="flex flex-shrink-0 items-center">
+                <a href="/" className="flex flex-shrink-0 items-center gap-4">
                   <img className="h-8 w-auto" src={Logo} alt="Your Company" />
-                </div>
+                  <div>
+                    <h1 className="text-md font-black">JEJAK LOMBOK</h1>
+                  </div>
+                </a>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (

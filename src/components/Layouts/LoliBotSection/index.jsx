@@ -24,7 +24,7 @@ const LoliBotSection = () => {
           incidunt iusto dignissimos officiis voluptatem a eos esse quas nostrum
           odio libero id.
         </p>
-        <Button>Chat Loli Bot</Button>
+        <Button to="/chat">Chat Loli Bot</Button>
       </div>
     </div>
   );

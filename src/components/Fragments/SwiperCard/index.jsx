@@ -4,7 +4,7 @@ import Card from "../Card";
 import { Link } from "react-router-dom";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
-import cardsData from "../../Layouts/DestinationSection/cardData.json"; // Mengimpor data dari file JSON
+import cardsData from "../../Layouts/DestinationSection/cardData.json";
 
 export default () => {
   // Mengambil 4 data pertama dari cardsData
@@ -34,6 +34,7 @@ export default () => {
         onSwiper={(swiper) => console.log(swiper)}
         style={{ zIndex: 0 }}
         pagination={{
+          clickable: true,
           dynamicBullets: true,
         }}
         modules={[Pagination]}

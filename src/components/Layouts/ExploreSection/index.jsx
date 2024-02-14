@@ -8,7 +8,7 @@ const ExploreSection = () => {
         <h1 className="text-4xl font-black leading-tight mb-8 tracking-wide text-white">
           Explore Popular Destination
         </h1>
-        <Button>See Details</Button>
+        <Button to="/destinasi">See Details</Button>
       </div>
       <SwiperCard></SwiperCard>
     </div>
