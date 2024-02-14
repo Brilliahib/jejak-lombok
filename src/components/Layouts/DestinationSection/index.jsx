@@ -1,26 +1,48 @@
-import Card from "../../Fragments/Card";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import cardData from "../DestinationSection/cardData.json";
 import { motion, AnimatePresence } from "framer-motion";
+import SearchBar from "../../Fragments/SearchBar";
+import Card from "../../Fragments/Card";
 
 const DestinationLayout = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [popupContent, setPopupContent] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filteredData, setFilteredData] = useState([]);
+
+  useEffect(() => {
+    const filtered = cardData.filter((card) =>
+      card.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setFilteredData(filtered);
+  }, [searchTerm]);
 
   const handleCardClick = (content) => {
     setPopupContent(content);
     setShowPopup(true);
   };
 
+  const handleChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
   return (
-    <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8 sm:mt-24 mt-12">
-      <h1 className="font-extrabold text-3xl sm:text-4xl text-center mb-12 sm:mb-24">
+    <div className="mx-auto max-w-7xl px-8 sm:px-6 lg:px-8 sm:mt-24 mt-12">
+      <div
+        className="flex justify-center search-bar"
+        style={{ marginTop: "-8.5rem" }}
+      >
+        <div className="bg-white shadow-md p-4 rounded-xl search-container">
+          <SearchBar placeholder="Search..." handleChange={handleChange} />
+        </div>
+      </div>
+      <h1 className="font-extrabold text-3xl sm:text-4xl text-center mb-12 sm:mb-24 sm:mt-24 mt-12">
         Rekomendasi <br />
         Destinasi Wisata
       </h1>
       <div className="destination-content">
         <div className="block sm:grid grid-cols-3 gap-x-8">
-          {cardData.map((card, index) => (
+          {filteredData.map((card, index) => (
             <Card
               key={index}
               imageUrl={card.imageUrl}

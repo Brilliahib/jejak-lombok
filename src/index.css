@@ -129,6 +129,12 @@ body {
   margin-bottom: 10px;
 }
 
+.search-container {
+  max-width: 628px;
+  margin: auto;
+  width: 100%;
+}
+
 @media (max-width: 576px) {
   html,
   body {
@@ -165,5 +171,11 @@ body {
   .card-shop img {
     width: 100%;
     height: 100%;
+  }
+  .search-bar {
+    margin-top: -5rem !important;
+  }
+  .search-container {
+    padding: 9px;
   }
 }

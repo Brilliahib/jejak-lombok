@@ -5,12 +5,18 @@ function Card({ imageUrl, title, description, mt, onClick }) {
     <div
       className={`card mb-6 ${mt}`}
       onClick={onClick}
-      style={{ cursor: "pointer" }}
+      style={{ cursor: "pointer", display: "flex", flexDirection: "column" }}
     >
-      <img src={imageUrl} alt="Card" className="card-image rounded-t-xl " />
-      <div className="card-content bg-white shadow p-4 rounded-xl">
+      <div className="relative">
+        <img
+          src={imageUrl}
+          alt="Card"
+          className="card-image w-full h-auto rounded-t-xl"
+        />
+      </div>
+      <div className="card-content bg-white shadow pt-2 p-4 rounded-b-xl flex-grow">
         <p className="font-semibold text-base my-1">{title}</p>
-        <p className="text-justify text-[#6F6F6F] flex text-sm">
+        <p className="text-[#6F6F6F] flex text-sm tracking-wide">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
