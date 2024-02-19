@@ -7,14 +7,8 @@ const navigation = [
   { name: "Home", href: "/", current: false },
   { name: "About", href: "/about", current: false },
   { name: "Destination", href: "/destinasi", current: false },
-  {
-    name: "Shop",
-    current: false,
-    subItems: [
-      { name: "Merchandise", href: "/shop", current: false },
-      { name: "Paket Wisata", href: "/shop/paket-wisata", current: false },
-    ],
-  },
+  { name: "Shop", href: "/shop", current: false },
+  { name: "Paket Wisata", href: "/shop/paket-wisata", current: false },
   { name: "Chat", href: "/chat", current: false },
 ];
 
