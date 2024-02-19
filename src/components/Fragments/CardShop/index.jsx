@@ -1,6 +1,5 @@
 // CardShop.jsx
 import React from "react";
-import Button from "../../Elements/Button";
 import CardShopData from "./CardShopData.json";
 
 function truncateDescription(description) {
@@ -23,7 +22,7 @@ function CardShop({ addToCart }) {
   };
 
   return (
-    <div className="sm:grid sm:grid-cols-4 sm:gap-6">
+    <div className="sm:grid sm:grid-cols-4 sm:gap-6 mb-8">
       {CardShopData.map((item, index) => (
         <div
           key={index}
@@ -33,7 +32,7 @@ function CardShop({ addToCart }) {
           <div className="bg-white p-4 rounded-xl">
             <p className="font-semibold text-base my-3">{item.title}</p>
             <p className="text-slate-900 text-sm mb-2 font-bold">
-              Rp {item.price}
+              Rp {item.price.toLocaleString()}
             </p>
             <p
               className="leading-loose mb-4 text-[#6F6F6F] text-sm"
