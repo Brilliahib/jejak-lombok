@@ -19,6 +19,18 @@
     {
       "src": "/about",
       "dest": "/"
+    },
+    {
+      "src": "/shop/paket-wisata",
+      "dest": "/"
+    },
+    {
+      "src": "/shop/paket-wisata/payment",
+      "dest": "/"
+    },
+    {
+      "src": "/shop/paket-wisata/payment/status",
+      "dest": "/"
     }
   ]
 }
