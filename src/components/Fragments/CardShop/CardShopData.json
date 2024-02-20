@@ -26,5 +26,33 @@
     "title": "Sayur Ares",
     "description": "Sayur Ares adalah hidangan khas Lombok yang terbuat dari batang pohon aren yang muda yang dimasak bersama dengan bumbu rempah khas, seperti serai, daun salam, lengkuas, jahe, dan bawang merah.",
     "price": 60000
+  },
+  {
+    "id": 5,
+    "imageUrl": "https://blog.tiket.com/wp-content/uploads/2021/01/1.-Sate-Bulayak.jpg",
+    "title": "Sate Bulayak",
+    "description": "Sate bulayak dibuat dari daging ayam, jeroan, dan daging sapi sebagai bahan utamanya. Ciri khasnya terletak pada bulayaknya. Bulayak merupakan lontong yang dililit daun aren atau enau yang punya tekstur lembut dan gurih.",
+    "price": 75000
+  },
+  {
+    "id": 6,
+    "imageUrl": "https://blog.tiket.com/wp-content/uploads/2021/01/2.-Kue-Bantal.jpg",
+    "title": "Kue Bantal",
+    "description": "Kue bantal khas Lombok adalah sejenis kue tradisional yang berasal dari Pulau Lombok, Indonesia. Kue ini juga dikenal dengan nama kue putu mayang atau kue putu. Kue bantal memiliki tekstur yang lembut dan kenyal, serta biasanya disajikan dengan gula merah cair dan kelapa parut sebagai topping.",
+    "price": 45000
+  },
+  {
+    "id": 7,
+    "imageUrl": "https://blog.tiket.com/wp-content/uploads/2021/01/12.-Jaje-Ore.jpg",
+    "title": "Jaje Ore",
+    "description": "Jaje ore adalah salah satu kue tradisional khas Lombok yang terbuat dari bahan dasar beras ketan. Kue ini memiliki tekstur yang kenyal dan manis dengan cita rasa kelapa yang khas. ",
+    "price": 65000
+  },
+  {
+    "id": 8,
+    "imageUrl": "https://blog.tiket.com/wp-content/uploads/2021/01/9.-Bebalung.jpg",
+    "title": "Bebalung",
+    "description": "Bebalung adalah sejenis hidangan khas Lombok yang terbuat dari iga sapi yang dimasak dengan bumbu rempah khas. Hidangan ini biasanya memiliki cita rasa yang kaya, pedas, dan sedikit manis.",
+    "price": 165000
   }
 ]

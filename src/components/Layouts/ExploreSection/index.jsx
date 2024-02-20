@@ -6,9 +6,9 @@ const ExploreSection = () => {
     <div className="mt-16 sm:mt-24 explore" style={{ marginTop: "-12rem" }}>
       <div className="heading sm:flex sm:justify-between explore-heading">
         <h1 className="text-4xl font-black leading-tight mb-8 tracking-wide text-white">
-          Explore Popular Destination
+          Eksplor destinasi populer Lombok!
         </h1>
-        <Button to="/destinasi">See Details</Button>
+        <Button to="/destinasi">Lihat Semua</Button>
       </div>
       <SwiperCard></SwiperCard>
     </div>

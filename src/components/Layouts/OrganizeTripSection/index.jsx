@@ -13,16 +13,16 @@ const OrganizeTripSection = () => {
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 py-24 text-white pb-80 px-8">
         <div className="block sm:flex sm:grid sm:grid-cols-2 sm:gap-12">
           <div className="" data-aos="fade-right" data-aos-once="false">
-            <h1 className="text-4xl font-black leading-tight mb-8 tracking-wide">
-              We Organize Your Trip
+            <h1 className="text-4xl font-black mb-8 tracking-wide leading-relaxed">
+              Atur perjalanan Anda dengan baik bersama Kami
             </h1>
             <p className="leading-loose mb-8">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus
-              laboriosam, aut soluta pariatur excepturi, neque ducimus numquam
-              incidunt iusto dignissimos officiis voluptatem a eos esse quas
-              nostrum odio libero id.
+              Website Jejak Lombok merupakan platform yang menyajikan informasi
+              lengkap tentang destinasi wisata di pulau Lombok. Dengan fitur
+              destinasi wisata Lombok, pengguna dapat dengan mudah menemukan
+              tempat-tempat menarik untuk dikunjungi.
             </p>
-            <Button to="/about">About Us</Button>
+            <Button to="/about">Tentang Kami</Button>
           </div>
           <div data-aos="fade-left" data-aos-once="false">
             <img

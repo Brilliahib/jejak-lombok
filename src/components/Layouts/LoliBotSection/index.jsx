@@ -16,7 +16,7 @@ const LoliBotSection = () => {
       </div>
       <div className="text-loli" data-aos="fade-left">
         <h1 className="text-4xl font-black leading-normal mb-8 tracking-wide">
-          Confused about where to go on holiday? Just ask Loli Bot!
+          Bingung mau liburan ke mana? Tanyakan saja pada Loli Bot!
         </h1>
         <p className="leading-loose mb-8">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus

@@ -137,6 +137,48 @@ body {
   width: 100%;
 }
 
+.card-paket-wisata {
+  transition: 0.3s ease;
+  overflow: hidden;
+}
+
+.card-paket-wisata:hover {
+  transform: translateY(-7px);
+}
+
+.card-paket-wisata img {
+  transition: 0.3s ease;
+}
+
+.card-paket-wisata img:hover {
+  transform: scale(1.05);
+}
+
+.card-shop {
+  transition: 0.3s ease;
+  overflow: hidden;
+}
+
+.card-shop:hover {
+  transform: translateY(-7px);
+}
+
+.card-shop img:hover {
+  transform: scale(1.05);
+}
+
+.card-shop img {
+  transition: 0.3s ease;
+}
+
+.card {
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-7px);
+}
+
 @media (max-width: 576px) {
   html,
   body {

@@ -11,7 +11,7 @@ const OurWebSection = () => {
     <div>
       <div className="mx-auto max-w-7xl px-8 sm:px-6 lg:px-8 sm:mt-24 sm:my-48 my-24">
         <div className="mb-16" data-aos="fade-right">
-          <h1 className="text-4xl font-black text-center">Our Website</h1>
+          <h1 className="text-4xl font-black text-center">Website Kami</h1>
         </div>
         <div className="text-center">
           <div data-aos="fade-left">

@@ -26,7 +26,7 @@ function CardShop({ addToCart }) {
       {CardShopData.map((item, index) => (
         <div
           key={index}
-          className="relative rounded-xl shadow-md card-shop h-[475px] sm:mb-0 mb-12"
+          className="relative rounded-xl shadow-md card-shop h-auto sm:h-[475px] sm:mb-0 mb-12"
         >
           <img src={item.imageUrl} alt="" className="rounded-t-xl" />
           <div className="bg-white p-4 rounded-xl">
@@ -46,7 +46,7 @@ function CardShop({ addToCart }) {
                 onClick={() => handleAddToCart(item)}
                 className="bg-sky-700 h-10 px-8 font-medium rounded-md text-white border border-transparent transition duration-300 hover:bg-white hover:border-sky-700 hover:text-sky-700"
               >
-                Add to Cart
+                Tambah Keranjang
               </button>
             </div>
           </div>

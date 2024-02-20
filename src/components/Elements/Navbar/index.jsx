@@ -4,9 +4,9 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Logo from "../../../assets/img/logo-notext.png";
 
 const navigation = [
-  { name: "Home", href: "/", current: false },
-  { name: "About", href: "/about", current: false },
-  { name: "Destination", href: "/destinasi", current: false },
+  { name: "Beranda", href: "/", current: false },
+  { name: "Tentang", href: "/about", current: false },
+  { name: "Destinasi", href: "/destinasi", current: false },
   { name: "Shop", href: "/shop", current: false },
   { name: "Paket Wisata", href: "/shop/paket-wisata", current: false },
   { name: "Chat", href: "/chat", current: false },
