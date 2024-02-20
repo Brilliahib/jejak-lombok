@@ -2,8 +2,9 @@ import { Fragment, useState, useEffect } from "react";
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Logo from "../../../assets/img/logo-notext.png";
+import { Link, useLocation } from "react-router-dom";
 
-const navigation = [
+const initialNavigation = [
   { name: "Beranda", href: "/", current: false },
   { name: "Tentang", href: "/about", current: false },
   { name: "Destinasi", href: "/destinasi", current: false },
@@ -18,6 +19,8 @@ function classNames(...classes) {
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [navigation, setNavigation] = useState(initialNavigation);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,6 +34,14 @@ export default function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  useEffect(() => {
+    const updatedNavigation = initialNavigation.map((item) => ({
+      ...item,
+      current: item.href === location.pathname,
+    }));
+    setNavigation(updatedNavigation);
+  }, [location]);
 
   return (
     <Disclosure
@@ -56,22 +67,21 @@ export default function Navbar() {
                 </Disclosure.Button>
               </div>
               <div className="flex flex-1 items-center px-3 sm:px-0 sm:items-stretch sm:justify-between">
-                <a href="/" className="flex flex-shrink-0 items-center gap-4">
+                <Link to="/" className="flex flex-shrink-0 items-center gap-4">
                   <img className="h-8 w-auto" src={Logo} alt="Your Company" />
                   <div>
                     <h1 className="text-md font-black">JEJAK LOMBOK</h1>
                   </div>
-                </a>
+                </Link>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
                       <div key={item.name} className="relative">
-                        <Disclosure.Button
-                          as="a"
-                          href={item.href}
+                        <Link
+                          to={item.href}
                           className={classNames(
                             item.current
-                              ? "bg-sky-900 text-white"
+                              ? "bg-sky-700 text-white"
                               : "text-slate-900 hover:bg-sky-700 hover:text-white",
                             "rounded-md px-3 py-2 text-sm font-medium",
                             isScrolled && "text-slate-900",
@@ -80,17 +90,17 @@ export default function Navbar() {
                           aria-current={item.current ? "page" : undefined}
                         >
                           {item.name}
-                        </Disclosure.Button>
+                        </Link>
                         {item.subItems && (
                           <Disclosure.Panel className="absolute top-full left-0 mt-1 bg-white shadow-lg rounded-md">
                             <div className="py-1">
                               {item.subItems.map((subItem) => (
-                                <a
+                                <Link
                                   key={subItem.name}
-                                  href={subItem.href}
+                                  to={subItem.href}
                                   className={classNames(
                                     subItem.current
-                                      ? "bg-sky-900 text-white"
+                                      ? "bg-sky-700 text-white"
                                       : "text-slate-900 hover:bg-sky-700 hover:text-white",
                                     "block px-4 py-2 text-sm cursor-pointer"
                                   )}
@@ -99,7 +109,7 @@ export default function Navbar() {
                                   }
                                 >
                                   {subItem.name}
-                                </a>
+                                </Link>
                               ))}
                             </div>
                           </Disclosure.Panel>
@@ -126,12 +136,12 @@ export default function Navbar() {
                           </Disclosure.Button>
                           <Disclosure.Panel className="space-y-1 pt-2 pb-3 pl-6 pr-2">
                             {item.subItems.map((subItem) => (
-                              <a
+                              <Link
                                 key={subItem.name}
-                                href={subItem.href}
+                                to={subItem.href}
                                 className={classNames(
                                   subItem.current
-                                    ? "bg-sky-900 text-white"
+                                    ? "bg-sky-700 text-white"
                                     : "text-slate-900 hover:bg-sky-700 hover:text-white",
                                   "block px-3 py-2 rounded-md text-base font-medium"
                                 )}
@@ -140,25 +150,25 @@ export default function Navbar() {
                                 }
                               >
                                 {subItem.name}
-                              </a>
+                              </Link>
                             ))}
                           </Disclosure.Panel>
                         </>
                       )}
                     </Disclosure>
                   ) : (
-                    <a
-                      href={item.href}
+                    <Link
+                      to={item.href}
                       className={classNames(
                         item.current
                           ? "bg-sky-900 text-white"
-                          : "text-slate-900 hover:bg-sky-700 hover:text-white",
+                          : "text-slate-700 hover:bg-sky-700 hover:text-white",
                         "block px-3 py-2 rounded-md text-base font-medium"
                       )}
                       aria-current={item.current ? "page" : undefined}
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   )}
                 </Fragment>
               ))}
