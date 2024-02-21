@@ -179,6 +179,10 @@ body {
   transform: translateY(-7px);
 }
 
+.bot-img {
+  width: 50px;
+}
+
 @media (max-width: 576px) {
   html,
   body {

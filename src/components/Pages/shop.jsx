@@ -10,9 +10,9 @@ const ShopPage = () => {
         className="header-content flex justify-content-center items-center w-full "
         style={{
           backgroundImage:
-            "url(https://titipku.com/blog/wp-content/uploads/2021/08/5df9e59f4c8b0.jpg)",
+            "url(https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
           backgroundSize: "cover",
-          backgroundPosition: "center bottom 30%",
+          backgroundPosition: "center bottom 45%",
         }}
       ></div>
       <ShopLayout />

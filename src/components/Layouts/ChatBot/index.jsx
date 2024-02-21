@@ -83,28 +83,29 @@ const Chatbot = () => {
         {messages.map((message, index) => (
           <div
             key={index}
-            className={`mb-2 ${
+            className={`mb-2 gap-x-4 ${
               message.fromUser ? "justify-end" : "justify-start"
             } flex`}
           >
-            <span
-              className={`px-2 py-1 ${
-                message.fromUser
-                  ? "bg-blue-500 text-white rounded-lg"
-                  : "bg-gray-300 text-gray-800 rounded-lg"
-              } flex`}
-            >
-              {message.fromUser ? (
-                message.text
-              ) : (
-                <>
+            <div className="flex flex-col">
+              {" "}
+              {/* Create a flex column for the message content */}
+              <span
+                className={`px-2 py-1 ${
+                  message.fromUser
+                    ? "bg-sky-700 text-white rounded-lg self-end"
+                    : "bg-gray-300 text-gray-800 rounded-lg"
+                }`}
+              >
+                {message.fromUser ? (
+                  message.text
+                ) : (
                   <TextAnimation text={message.text} />
-                </>
-              )}
-            </span>
+                )}
+              </span>
+            </div>
           </div>
         ))}
-        {/* Display loading spinner when isBotTyping is true */}
         {isBotTyping && (
           <div className="flex justify-start mb-2">
             <div className="lds-ring">
@@ -130,7 +131,7 @@ const Chatbot = () => {
           />
           <button
             onClick={handleSendMessage}
-            className="px-4 py-2 font-semibold text-white bg-blue-500 rounded-lg"
+            className="px-4 py-2 font-semibold text-white bg-sky-700 rounded-lg"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
