@@ -18,11 +18,12 @@ const LoliBotSection = () => {
         <h1 className="text-4xl font-black leading-normal mb-8 tracking-wide">
           Bingung mau liburan ke mana? Tanyakan saja pada Loli Bot!
         </h1>
-        <p className="leading-loose mb-8">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus
-          laboriosam, aut soluta pariatur excepturi, neque ducimus numquam
-          incidunt iusto dignissimos officiis voluptatem a eos esse quas nostrum
-          odio libero id.
+        <p className="leading-loose mb-8 text-gray-600">
+          Loli Bot adalah bot yang menyediakan informasi tentang Lombok,
+          termasuk destinasi, makanan khas, dan rekomendasi wisata. Dengan
+          teknologi terkini, bot ini membantu pengguna untuk mendapatkan
+          informasi yang akurat dan berguna tentang pariwisata di Lombok,
+          memudahkan perencanaan wisata.
         </p>
         <Button to="/chat">Chat Loli Bot</Button>
       </div>

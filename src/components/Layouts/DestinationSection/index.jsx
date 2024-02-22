@@ -33,10 +33,13 @@ const DestinationLayout = () => {
         style={{ marginTop: "-8rem" }}
       >
         <div className="bg-white shadow-md p-3 rounded-xl search-container">
-          <SearchBar placeholder="Search..." handleChange={handleChange} />
+          <SearchBar
+            placeholder="Cari Destinasi..."
+            handleChange={handleChange}
+          />
         </div>
       </div>
-      <h1 className="font-extrabold text-3xl sm:text-4xl text-center mb-12 sm:mb-24 sm:mt-24 mt-12">
+      <h1 className="font-extrabold text-3xl sm:text-4xl text-center mb-12 sm:mb-24 sm:mt-24 mt-12 tracking-wide">
         Rekomendasi <br />
         Destinasi Wisata
       </h1>

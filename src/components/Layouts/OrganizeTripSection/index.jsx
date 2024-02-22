@@ -16,7 +16,7 @@ const OrganizeTripSection = () => {
             <h1 className="text-4xl font-black mb-8 tracking-wide leading-relaxed">
               Atur perjalanan Anda dengan baik bersama Kami
             </h1>
-            <p className="leading-loose mb-8">
+            <p className="leading-loose mb-8 text-gray-400">
               Website Jejak Lombok merupakan platform yang menyajikan informasi
               lengkap tentang destinasi wisata di pulau Lombok. Dengan fitur
               destinasi wisata Lombok, pengguna dapat dengan mudah menemukan

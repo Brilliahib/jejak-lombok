@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import SwiperPaketWisata from "../../Fragments/SwiperPaketWisata";
 
 const PaymentStatusLayout = ({
   nama,
@@ -13,12 +14,7 @@ const PaymentStatusLayout = ({
       <div className="sm:flex sm:grid sm:grid-cols-2 sm:gap-16">
         <div className="sm:bg-whte sm:shadow-xl sm:rounded-xl sm:p-12 mb-16 sm:mb-0">
           <div className="img-payment mb-4">
-            <img
-              src="https://images.unsplash.com/photo-1496275068113-fff8c90750d1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt=""
-              className="rounded-xl mb-3"
-              height={300}
-            />
+            <SwiperPaketWisata />
             <p className="text-base font-semibold">Jejak Lombok</p>
           </div>
           <div className="card-payment-detail p-4 bg-[#F5F6F8] rounded-3xl mb-16">

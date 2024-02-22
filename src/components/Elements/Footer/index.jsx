@@ -1,22 +1,27 @@
+import LogoWithCircle from "../../../assets/img/logo-with-circle.png";
+
 const Footer = () => {
   return (
     <div className="bg-sky-900 text-white sm:mt-24 mt-12">
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8 py-12">
         <div className="sm:flex sm:grid sm:grid-cols-3 sm:gap-4 justify-between">
           <div className="sm:mb-0 mb-8">
+            <img className="mb-4" src={LogoWithCircle} alt="" width={50} />
             <h3 className="font-black text-xl mb-4">JEJAK LOMBOK</h3>
-            <p>"Discover Lombok: Where Tradition Meets Technology!"</p>
+            <p className="text-gray-400">
+              "Discover Lombok: Where Tradition Meets Technology!"
+            </p>
           </div>
           <div className="sm:mb-0 mb-8">
-            <h1 className="mb-4 font-bold">Contact</h1>
-            <ul className="leading-loose">
+            <h1 className="mb-4 font-bold tracking-wider">Contact</h1>
+            <ul className="leading-loose text-gray-400">
               <li>+62812345678</li>
               <li>jejaklombok@gmail.com</li>
             </ul>
           </div>
           <div>
-            <h1 className="mb-4 font-bold">Link</h1>
-            <ul className="leading-loose">
+            <h1 className="mb-4 font-bold tracking-wider">Link</h1>
+            <ul className="leading-loose text-gray-400">
               <li>
                 <a href="/">Home</a>
               </li>
@@ -37,7 +42,9 @@ const Footer = () => {
         </div>
         <div className="hr text-center mt-12">
           <hr className="mb-6 border-gray-200" />
-          <p>© Copyright 2024 | Made by Brilliahib & Akhila Zahra</p>
+          <p className="text-gray-400">
+            © Copyright 2024 | Made by Brilliahib & Akhila Zahra
+          </p>
         </div>
       </div>
     </div>

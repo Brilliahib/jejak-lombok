@@ -183,6 +183,28 @@ body {
   width: 50px;
 }
 
+/* Mengubah gaya tombol next dan prev di Swiper */
+.swiper-button-prev,
+.swiper-button-next {
+  width: 10px !important; /* Lebar tombol */
+  height: 10px !important; /* Tinggi tombol */
+  color: #fff !important; /* Warna teks */
+  border-radius: 50% !important; /* Bentuk bulat */
+  display: flex !important; /* Menampilkan dalam flexbox */
+  justify-content: center !important; /* Pusatkan horizontal */
+  align-items: center !important; /* Pusatkan vertikal */
+  font-size: 10px !important; /* Ukuran font */
+}
+
+/* Mengubah margin antara tombol next dan prev */
+.swiper-button-prev {
+  margin-left: 10px !important; /* Margin kiri */
+}
+
+.swiper-button-next {
+  margin-right: 10px !important; /* Margin kanan */
+}
+
 @media (max-width: 576px) {
   html,
   body {

@@ -8,7 +8,7 @@ const initialNavigation = [
   { name: "Beranda", href: "/", current: false },
   { name: "Tentang", href: "/about", current: false },
   { name: "Destinasi", href: "/destinasi", current: false },
-  { name: "Shop", href: "/shop", current: false },
+  { name: "Toko", href: "/shop", current: false },
   { name: "Paket Wisata", href: "/shop/paket-wisata", current: false },
   { name: "Chat", href: "/chat", current: false },
 ];
