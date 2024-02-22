@@ -3,8 +3,14 @@ import Button from "../../Elements/Button";
 import cardsData from "../DestinationSection/cardData.json";
 import Card from "../../Fragments/Card";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ExploreSection = () => {
+  useEffect(() => {
+    AOS.init({ durattion: 1000 });
+  });
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const isMobile = windowWidth <= 640; // Ubah ukuran sesuai kebutuhan
 
@@ -24,10 +30,21 @@ const ExploreSection = () => {
     <div className="mt-16 sm:mt-24 explore">
       <div className="heading sm:flex sm:justify-between explore-heading mb-4">
         <div>
-          <p className="text-base font-semibold text-sky-700 tracking-wider leading-loose uppercase">
+          <p
+            className="text-base font-semibold text-sky-700 tracking-wider leading-loose uppercase"
+            data-aos="fade-right"
+            data-aos-once="false"
+            data-aos-duration="1000"
+          >
             Destinasi Populer
           </p>
-          <h1 className="text-4xl font-black leading-tight mb-8 tracking-wide text-slate-900">
+          <h1
+            className="text-4xl font-black leading-tight mb-8 tracking-wide text-slate-900"
+            data-aos="fade-right"
+            data-aos-once="false"
+            data-aos-duration="1000"
+            data-aos-delay="100"
+          >
             Cari Destinasi Populer
           </h1>
         </div>

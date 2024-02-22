@@ -9,9 +9,11 @@ const HomeLayout = (props) => {
   return (
     <div className="">
       <Navbar></Navbar>
-      <Jumbotron />
-      <OrganizeTripSection />
-      <div className="mx-auto max-w-7xl px-8 sm:px-6 lg:px-8">{children}</div>
+      <div className="overflow-hidden">
+        <Jumbotron />
+        <OrganizeTripSection />
+        <div className="mx-auto max-w-7xl px-8 sm:px-6 lg:px-8">{children}</div>
+      </div>
       <Footer />
     </div>
   );

@@ -12,7 +12,11 @@ const KataKamiSection = () => {
     <div className="bg-sky-900 py-24 text-white overflow-hidden">
       <div className="mx-auto max-w-7xl px-8 sm:px-6 lg:px-8 sm:py-12">
         <div className="sm:flex sm:grid sm:grid-cols-2 sm:gap-4">
-          <div className="sm:mb-0 mb-16" data-aos="fade-right">
+          <div
+            className="sm:mb-0 mb-16"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
             <img
               src={OurFoto}
               alt=""
@@ -21,7 +25,7 @@ const KataKamiSection = () => {
               style={{ filter: "grayscale(100%)" }}
             />
           </div>
-          <div className="" data-aos="fade-left">
+          <div className="" data-aos="fade-left" data-aos-duration="1000">
             <ul className="leading-loose">
               <li className="text-6xl font-black">"</li>
               <li className="mb-12 text-lg">

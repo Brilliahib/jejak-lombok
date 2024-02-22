@@ -1,9 +1,18 @@
-import cardTestimoniData from "./cardTestimoniData.json";
-import React from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import React, { useEffect } from "react";
 
 const CardTestimoni = ({ testimoni }) => {
+  useEffect(() => {
+    AOS.init({ durattion: 1000 });
+  });
   return (
-    <div className="card-testimoni bg-white rounded-xl shadow-md p-4">
+    <div
+      className="card-testimoni bg-white rounded-xl shadow-md p-4"
+      data-aos="fade-up"
+      data-aos-once="false"
+      data-aos-duration="1000"
+    >
       <div className="card-top flex mb-3 justify-between items-center">
         <div className="profile-content flex gap-4 items-center">
           <div className="foto-profile">

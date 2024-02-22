@@ -10,11 +10,11 @@ const OurWebSection = () => {
   return (
     <div>
       <div className="mx-auto max-w-7xl px-8 sm:px-6 lg:px-8 sm:mt-24 sm:my-48 my-24 overflow-hidden">
-        <div className="mb-16" data-aos="fade-right">
+        <div className="mb-16" data-aos="fade-right" data-aos-duration="1000">
           <h1 className="text-4xl font-black text-center">Website Kami</h1>
         </div>
         <div className="text-center">
-          <div data-aos="fade-left">
+          <div data-aos="fade-left" data-aos-duration="1000">
             <p className="leading-loose text-gray-600">
               Website Jejak Lombok merupakan platform yang menyajikan informasi
               lengkap tentang destinasi wisata di pulau Lombok. Dengan fitur

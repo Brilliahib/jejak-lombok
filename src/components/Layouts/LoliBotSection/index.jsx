@@ -11,10 +11,10 @@ const LoliBotSection = () => {
 
   return (
     <div className="sm:flex sm:grid sm:grid-cols-2 sm:gap-x-12 py-24 sm:py-28 overflow-hidden">
-      <div className="img-loli" data-aos="fade-right">
+      <div className="img-loli" data-aos="fade-right" data-aos-duration="1000">
         <img src={Loli} alt="Loli" width={300} />
       </div>
-      <div className="text-loli" data-aos="fade-left">
+      <div className="text-loli" data-aos="fade-left" data-aos-duration="1000">
         <h1 className="text-4xl font-black leading-normal mb-8 tracking-wide">
           Bingung mau liburan ke mana? Tanyakan saja pada Loli Bot!
         </h1>
