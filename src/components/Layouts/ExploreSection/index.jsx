@@ -24,7 +24,7 @@ const ExploreSection = () => {
     <div className="mt-16 sm:mt-24 explore">
       <div className="heading sm:flex sm:justify-between explore-heading mb-4">
         <div>
-          <p className="text-lg font-semibold text-sky-700 tracking-wider leading-loose">
+          <p className="text-base font-semibold text-sky-700 tracking-wider leading-loose uppercase">
             Destinasi Populer
           </p>
           <h1 className="text-4xl font-black leading-tight mb-8 tracking-wide text-slate-900">
