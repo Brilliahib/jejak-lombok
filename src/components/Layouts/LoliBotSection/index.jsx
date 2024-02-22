@@ -10,7 +10,7 @@ const LoliBotSection = () => {
   });
 
   return (
-    <div className="sm:flex sm:grid sm:grid-cols-2 sm:gap-x-12 sm:pt-36 pt-24">
+    <div className="sm:flex sm:grid sm:grid-cols-2 sm:gap-x-12 py-24 sm:py-28">
       <div className="img-loli" data-aos="fade-right">
         <img src={Loli} alt="Loli" width={300} />
       </div>

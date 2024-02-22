@@ -92,10 +92,6 @@ body {
   align-items: center;
 }
 
-.explore {
-  margin-top: -24rem;
-}
-
 .organize-section img {
   right: 30px;
 }
@@ -128,7 +124,9 @@ body {
 }
 
 .swiper-slide {
-  margin-bottom: 20px;
+  padding-bottom: 50px;
+  padding-left: 4px !important;
+  padding-right: 4px !important;
 }
 
 .search-container {
@@ -183,26 +181,9 @@ body {
   width: 50px;
 }
 
-/* Mengubah gaya tombol next dan prev di Swiper */
-.swiper-button-prev,
-.swiper-button-next {
-  width: 10px !important; /* Lebar tombol */
-  height: 10px !important; /* Tinggi tombol */
-  color: #fff !important; /* Warna teks */
-  border-radius: 50% !important; /* Bentuk bulat */
-  display: flex !important; /* Menampilkan dalam flexbox */
-  justify-content: center !important; /* Pusatkan horizontal */
-  align-items: center !important; /* Pusatkan vertikal */
-  font-size: 10px !important; /* Ukuran font */
-}
-
-/* Mengubah margin antara tombol next dan prev */
-.swiper-button-prev {
-  margin-left: 10px !important; /* Margin kiri */
-}
-
-.swiper-button-next {
-  margin-right: 10px !important; /* Margin kanan */
+.rounded-100 {
+  border-radius: 100%;
+  height: 50px;
 }
 
 @media (max-width: 576px) {

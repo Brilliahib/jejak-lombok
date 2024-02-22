@@ -2,6 +2,7 @@ import Footer from "../Elements/Footer";
 import Navbar from "../Elements/Navbar";
 import Jumbotron from "./JumbotronSection";
 import OrganizeTripSection from "./OrganizeTripSection";
+import TestimoniSection from "./TestimoniSection";
 
 const HomeLayout = (props) => {
   const { children } = props;

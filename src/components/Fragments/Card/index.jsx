@@ -3,7 +3,7 @@ import React from "react";
 function Card({ imageUrl, title, description, mt, onClick }) {
   return (
     <div
-      className={`card mb-12 ${mt}`}
+      className={`card mb-12 sm:h-[300px] ${mt}`}
       onClick={onClick}
       style={{ cursor: "pointer", display: "flex", flexDirection: "column" }}
     >
