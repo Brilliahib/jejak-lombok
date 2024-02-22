@@ -9,7 +9,7 @@ const OrganizeTripSection = () => {
   });
 
   return (
-    <div className="bg-sky-900">
+    <div className="bg-sky-900 overflow-hidden">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 py-24 text-white px-8">
         <div className="block sm:flex sm:grid sm:grid-cols-2 sm:gap-12">
           <div className="" data-aos="fade-right" data-aos-once="false">

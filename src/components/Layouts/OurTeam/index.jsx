@@ -10,7 +10,7 @@ const OurTeamSection = () => {
   });
   return (
     <div>
-      <div className="mx-auto max-w-7xl px-8 sm:px-6 lg:px-8 sm:mt-24 sm:my-48 my-24">
+      <div className="mx-auto max-w-7xl px-8 sm:px-6 lg:px-8 sm:mt-24 sm:my-48 my-24 overflow-hidden">
         <div data-aos="fade-up">
           <h1 className="font-black text-4xl text-center">Tim Kami</h1>
         </div>
