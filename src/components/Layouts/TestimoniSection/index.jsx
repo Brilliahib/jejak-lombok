@@ -22,7 +22,7 @@ const TestimoniSection = () => {
         data-aos="fade-right"
         data-aos-once="false"
         data-aos-duration="1000"
-        data-aos-delay="100"
+        data-aos-delay="100 "
       >
         Apa Kata Mereka?
       </h1>
