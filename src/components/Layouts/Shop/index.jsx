@@ -33,7 +33,7 @@ const ShopLayout = () => {
 
     doc.setFontSize(14);
     doc.text(
-      `Total Harga: Rp ${calculateTotalPrice()}`,
+      `Total Harga: Rp ${calculateTotalPrice().toLocaleString()}`,
       105,
       50,
       null,
@@ -113,7 +113,7 @@ const ShopLayout = () => {
     <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8 sm:mt-24 mt-12 mb-12 px-8 relative">
       <div>
         <h1 className="text-4xl font-black leading-normal mb-8 tracking-wide text-center">
-          Makanan Daerah
+          Makanan Khas
         </h1>
         <div className="card-content">
           <CardShop addToCart={addToCart} />
@@ -194,16 +194,16 @@ const ShopLayout = () => {
                       {selectedItem.title}
                     </h2>
                     <p>Jumlah: {selectedItem.quantity}</p>
-                    <p>Rp {selectedItem.price}</p>
+                    <p>Rp {selectedItem.price.toLocaleString()}</p>
                     <div className="flex items-center mt-2">
                       <button
-                        className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center mr-2"
+                        className="bg-sky-700 text-white rounded-full w-6 h-6 flex items-center justify-center mr-2"
                         onClick={() => decreaseQuantity(selectedItem.id)}
                       >
                         -
                       </button>
                       <button
-                        className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center"
+                        className="bg-sky-700 text-white rounded-full w-6 h-6 flex items-center justify-center"
                         onClick={() => increaseQuantity(selectedItem.id)}
                       >
                         +
@@ -214,7 +214,7 @@ const ShopLayout = () => {
               ))}
               <div className="mt-4 border-t pt-4">
                 <p className="text-lg font-semibold">
-                  Total Harga: Rp {calculateTotalPrice()}
+                  Total Harga: Rp {calculateTotalPrice().toLocaleString()}
                 </p>
               </div>
               <div className="flex justify-end mt-8">

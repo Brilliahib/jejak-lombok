@@ -60,8 +60,6 @@ const PaymentPaketWisata = () => {
               className="rounded-xl mb-3"
               height={300}
             />
-            {/* Nama paket wisata */}
-            <p className="text-base font-semibold">Jejak Lombok</p>
           </div>
           <div className="card-payment-detail p-4 bg-[#F5F6F8] rounded-3xl mb-16">
             {/* Informasi detail paket wisata */}
@@ -80,25 +78,24 @@ const PaymentPaketWisata = () => {
             </div>
           </div>
           <div className="desc-payment">
-            {/* Deskripsi paket wisata */}
-            <p className="mb-4 text-justify text-[#6F6F6F]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-              dignissimos saepe consequuntur quod ratione, quae vero a natus
-              eius! Illum soluta debitis excepturi aliquid quam nostrum itaque
-              blanditiis beatae totam quae ad obcaecati, ab est magni
-              exercitationem dolor magnam iusto inventore accusantium, quisquam
-              unde pariatur libero non dolore. Dolores, sit corrupti. Beatae
-              nam, odit ducimus id totam error commodi tempore.
+            <p className="mb-4 text-xl font-bold text-slate-900">
+              Cara Pembayaran
             </p>
-            {/* Peta lokasi paket wisata */}
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d504977.3342435287!2d115.94334025597072!3d-8.582975598642495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcdb7d23e8cc745%3A0x446689c4ab50d8c9!2sLombok!5e0!3m2!1sen!2sid!4v1708187529331!5m2!1sen!2sid"
-              width="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              className=" z-100 rounded-lg"
-            ></iframe>
+            <ol className="list-decimal ml-4 leading-loose text-gray-600 text-justify">
+              <li>Isi terlebih dahulu data Anda berupa nama dan email.</li>
+              <li>
+                Pilih metode pembayaran yang nantinya anda gunakan untuk
+                membayar.
+              </li>
+              <li>
+                Setelah mengisi data dan memilih metode pembayaran, klik bayar
+                sekarang dan transfer sesuai metode pembayaran dan nominal yang
+                sudah Anda pilih.
+              </li>
+              <li>
+                Setelah melakukan transaksi, refresh status dan cek email Anda.
+              </li>
+            </ol>
           </div>
         </div>
         {/* Form pembayaran */}
@@ -122,15 +119,26 @@ const PaymentPaketWisata = () => {
                 </div>
                 <div className="w-full">
                   <label for="telepon" className="font-medium">
-                    Nomor Telepon
+                    Email
                   </label>
                   <input
-                    type="text"
+                    type="email"
                     id="telepon"
                     className="mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-[20px] focus:ring-primary focus:border-primary block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-sky-700 tracking-wide leading-loose"
-                    placeholder="Masukkan nomor telepon Anda"
+                    placeholder="Masukkan email Anda"
                   />
                 </div>
+              </div>
+              <div className="w-full mb-8">
+                <label htmlFor="tanggal" className="font-medium">
+                  Tanggal Keberangkatan
+                </label>
+                <input
+                  type="date"
+                  id="tanggal"
+                  className="mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-[20px] focus:ring-primary focus:border-primary block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-sky-700 tracking-wide leading-loose"
+                  // tambahkan value dan event handler jika diperlukan
+                />
               </div>
               {/* Pilihan metode pembayaran */}
               <div className="w-full mb-8">

@@ -2,28 +2,28 @@
   {
     "id": 1,
     "imageUrl": "https://images.unsplash.com/photo-1501950183564-3c8ac97d08f0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "title": "Paket Wisata (A)",
+    "title": "Paket Wisata A (4 Hari)",
     "description": "Kuta Mandalika & Sasak Tour, Kuta Mandalika & Sasak Tour",
     "price": 900000
   },
   {
     "id": 2,
     "imageUrl": "https://images.unsplash.com/photo-1621001481154-a52cbb91fcc2?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "title": "Paket Wisata (B)",
+    "title": "Paket Wisata B (4 Hari)",
     "description": "Trip Gili Nanggu Sudak & Kedis, Kuta Mandalika & Sasak Tour",
     "price": 900000
   },
   {
     "id": 3,
     "imageUrl": "https://images.unsplash.com/photo-1532506182952-9aaa2633962a?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "title": "Paket Wisata (C)",
+    "title": "Paket Wisata C (4 Hari)",
     "description": "Snorkeling Trip Pantai Pink, Kuta Mandalika & Sasak Tour",
     "price": 900000
   },
   {
     "id": 4,
     "imageUrl": "https://images.unsplash.com/photo-1605752696577-cf08790de4aa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "title": "Paket Wisata (D)",
+    "title": "Paket Wisata D (4 Hari)",
     "description": "Sendang Gila & Tiu Kelep, Kuta Mandalika & Sasak Tour",
     "price": 900000
   }
