@@ -129,16 +129,30 @@ const PaymentPaketWisata = () => {
                   />
                 </div>
               </div>
-              <div className="w-full mb-8">
-                <label htmlFor="tanggal" className="font-medium">
-                  Tanggal Keberangkatan
-                </label>
-                <input
-                  type="date"
-                  id="tanggal"
-                  className="mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-[20px] focus:ring-primary focus:border-primary block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-sky-700 tracking-wide leading-loose"
-                  // tambahkan value dan event handler jika diperlukan
-                />
+              <div className="flex w-[100%] flex-col md:flex-row items-end gap-6 mb-8">
+                <div className="w-full sm:mb-8 mb-0">
+                  <label htmlFor="tanggal" className="font-medium">
+                    Tanggal Keberangkatan
+                  </label>
+                  <input
+                    type="date"
+                    id="tanggal"
+                    className="mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-[20px] focus:ring-primary focus:border-primary block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-sky-700 tracking-wide leading-loose"
+                    // tambahkan value dan event handler jika diperlukan
+                  />
+                </div>
+                <div className="w-full mb-8">
+                  <label htmlFor="tanggal" className="font-medium">
+                    Jumlah Orang
+                  </label>
+                  <input
+                    type="number"
+                    id="tanggal"
+                    className="mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-[20px] focus:ring-primary focus:border-primary block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-sky-700 tracking-wide leading-loose"
+                    placeholder="0"
+                    min={0}
+                  />
+                </div>
               </div>
               {/* Pilihan metode pembayaran */}
               <div className="w-full mb-8">

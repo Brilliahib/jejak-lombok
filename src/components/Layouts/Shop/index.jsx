@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import CardShop from "../../Fragments/CardShop";
 import { jsPDF } from "jspdf";
+import CardMerchandise from "../../Fragments/CardMerchandise";
 
 const ShopLayout = () => {
   const [selectedItems, setSelectedItems] = useState([]);
@@ -117,6 +118,14 @@ const ShopLayout = () => {
         </h1>
         <div className="card-content">
           <CardShop addToCart={addToCart} />
+        </div>
+      </div>
+      <div>
+        <h1 className="text-4xl font-black leading-normal mb-8 tracking-wide text-center">
+          Merchandise
+        </h1>
+        <div className="card-content">
+          <CardMerchandise addToCart={addToCart} />
         </div>
       </div>
       <div className="fixed bottom-8 right-8">

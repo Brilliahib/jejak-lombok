@@ -1,0 +1,58 @@
+[
+  {
+    "id": 9,
+    "imageUrl": "https://ih1.redbubble.net/image.3367696240.9353/ssrco,slim_fit_t_shirt,womens,fafafa:ca443f4786,front,square_product,600x600.jpg",
+    "title": "Kaos Kuta Beach",
+    "description": "Kaos dengan gambar Pantai Kuta, salah satu pemandangan yang ikonik di Pulau Lombok.",
+    "price": 100000
+  },
+  {
+    "id": 10,
+    "imageUrl": "https://ntbmall.com/images/product/f96c57a9-af0e-4936-8a1f-22bf40399106/f96c57a9-af0e-4936-8a1f-22bf40399106-12023-05-05%2016:02:38.png",
+    "title": "Tas Pinggang Canvas Tenun",
+    "description": "Tas pinggang yang terbuat dari kanvas berkualitas tinggi, dihiasi dengan tenunan tradisional yang memperindah tampilannya. Cocok untuk membawa barang-barang kecil saat beraktivitas.",
+    "price": 80000
+  },
+  {
+    "id": 11,
+    "imageUrl": "https://ntbmall.com/images/product/3bcac4fe-9dab-4b95-b9ac-afb6addc699f/3bcac4fe-9dab-4b95-b9ac-afb6addc699f-eb0fb3a3-43d2-44ed-b4e3-cde5686e4d79.png",
+    "title": "Tas Tote Tenun Custom",
+    "description": "Tas tote yang dirancang dengan motif tenun yang dapat disesuaikan sesuai selera Anda. Terbuat dari bahan berkualitas tinggi untuk daya tahan yang baik.",
+    "price": 120000
+  },
+  {
+    "id": 12,
+    "imageUrl": "https://ntbmall.com/images/product/8e705f1e-c812-4e20-82ed-2e53ce3db2d8/8e705f1e-c812-4e20-82ed-2e53ce3db2d8-12021-08-14%2010:45:23.png",
+    "title": "Boneka Rusa NTB",
+    "description": "Boneka lucu yang menggambarkan hewan rusa khas daerah NTB. Cocok sebagai hiasan atau teman bermain bagi anak-anak.",
+    "price": 60000
+  },
+  {
+    "id": 13,
+    "imageUrl": "https://ntbmall.com/images/product/8f9d3a9a-af49-479e-9863-7fd35c04e701/8f9d3a9a-af49-479e-9863-7fd35c04e701-12021-11-01%2014:05:26.png",
+    "title": "Tumbler Bambu dengan Gelas",
+    "description": "Tumbler yang terbuat dari bambu alami dengan gelas kaca berkualitas tinggi. Ramah lingkungan dan nyaman digunakan untuk minum di mana pun Anda berada.",
+    "price": 75000
+  },
+  {
+    "id": 14,
+    "imageUrl": "https://ih1.redbubble.net/image.3363487872.5420/ur,backpack_front,square,600x600.jpg",
+    "title": "Tas Kuta Beach",
+    "description": "Tas yang dihiasi dengan desain Pantai Kuta, menampilkan keindahan panorama pantai yang memukau. Cocok untuk membawa barang bawaan Anda saat liburan atau perjalanan sehari-hari.",
+    "price": 45000
+  },
+  {
+    "id": 15,
+    "imageUrl": "https://ntbmall.com/images/product/30443316-97ee-4ccf-a9b4-2e4b8909aaa7/30443316-97ee-4ccf-a9b4-2e4b8909aaa7-12022-03-09%2013:00:09.png",
+    "title": "Boneka Rajut Kecil NTB",
+    "description": "Boneka rajut kecil dengan motif khas daerah NTB. Dibuat dengan teliti untuk memberikan keceriaan bagi si kecil atau sebagai hadiah unik.",
+    "price": 65000
+  },
+  {
+    "id": 16,
+    "imageUrl": "https://ih1.redbubble.net/image.2492720149.8264/ls,13inch,x600-c,90,0,600,600-bg,f8f8f8.jpg",
+    "title": "Sarung Laptop Kuta Lombok",
+    "description": "Sarung laptop dengan motif Kuta Lombok, menciptakan kesan eksotis dan alami. Terbuat dari bahan berkualitas untuk melindungi laptop Anda dari goresan dan debu.",
+    "price": 165000
+  }
+]
