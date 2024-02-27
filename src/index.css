@@ -191,6 +191,11 @@ body {
   height: 50px;
 }
 
+.bg-video {
+  min-height: 100vh;
+  margin-top: -4rem !important;
+}
+
 @media (max-width: 576px) {
   html,
   body {

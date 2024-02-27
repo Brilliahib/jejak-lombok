@@ -49,7 +49,7 @@ const DestinationLayout = () => {
             <Card
               key={index}
               imageUrl={card.imageUrl}
-              description={card.description}
+              description={card.location}
               title={card.title}
               onClick={() =>
                 handleCardClick(
@@ -72,7 +72,7 @@ const DestinationLayout = () => {
                           viewBox="0 0 24 24"
                           strokeWidth="1.5"
                           stroke="currentColor"
-                          className="w-6 h-6 text-sky-700 mr-2"
+                          className="w-5 h-5 text-sky-700 mr-2"
                         >
                           <path
                             strokeLinecap="round"
@@ -86,7 +86,12 @@ const DestinationLayout = () => {
                           />
                         </svg>
                         <p className="text-[#6F6F6F] text-sm">
-                          {card.description}
+                          {card.location}
+                        </p>
+                      </div>
+                      <div className="deskripsi-destinasi text-left mb-4">
+                        <p className="text-slate-900 text-sm leading-loose">
+                          {card.deskripsi}
                         </p>
                       </div>
 
