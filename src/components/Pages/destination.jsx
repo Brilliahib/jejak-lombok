@@ -1,8 +1,14 @@
 import Footer from "../Elements/Footer";
 import Navbar from "../Elements/Navbar";
+import ButtonBotFixed from "../Fragments/ButtonBotFIxed";
 import DestinationLayout from "../Layouts/DestinationSection";
+import React, { useEffect } from "react";
 
 const DestinationPage = () => {
+  useEffect(() => {
+    // Ketika komponen dimuat, scroll window ke paling atas
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <Navbar />
@@ -16,6 +22,7 @@ const DestinationPage = () => {
         }}
       ></div>
       <DestinationLayout />
+      <ButtonBotFixed />
       <Footer />
     </div>
   );

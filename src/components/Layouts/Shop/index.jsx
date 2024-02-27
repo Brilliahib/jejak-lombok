@@ -130,7 +130,7 @@ const ShopLayout = () => {
       </div>
       <div className="fixed bottom-8 right-8">
         <button
-          className="bg-sky-700 text-white rounded-full w-12 h-12 flex items-center justify-center"
+          className="bg-sky-700 text-white rounded-full p-4 flex items-center justify-center border border-transparent transition duration-300 hover:bg-white hover:border-sky-700 hover:text-sky-700"
           onClick={() => setShowPopup(true)}
         >
           <svg

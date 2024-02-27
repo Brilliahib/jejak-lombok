@@ -1,8 +1,14 @@
 import Navbar from "../Elements/Navbar";
 import PaketWisataLayout from "../Layouts/PaketWisata";
 import Footer from "../Elements/Footer";
+import ButtonBotFixed from "../Fragments/ButtonBotFIxed";
+import React, { useEffect } from "react";
 
 const PaketWisataPage = () => {
+  useEffect(() => {
+    // Ketika komponen dimuat, scroll window ke paling atas
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <Navbar />
@@ -16,6 +22,7 @@ const PaketWisataPage = () => {
         }}
       ></div>
       <PaketWisataLayout />
+      <ButtonBotFixed />
       <Footer />
     </div>
   );

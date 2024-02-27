@@ -105,8 +105,13 @@ body {
   justify-content: center;
 }
 
-.img-loli img {
-  width: 350px;
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px); /* Ubah nilai ini sesuai keinginan Anda */
+  }
 }
 
 .card-shop img {
