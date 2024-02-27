@@ -61,7 +61,7 @@ const ExploreSection = () => {
               <Card
                 imageUrl={card.imageUrl}
                 title={card.title}
-                description={card.description}
+                description={card.location}
               />
             </Link>
           ))}
