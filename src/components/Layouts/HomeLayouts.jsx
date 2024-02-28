@@ -9,13 +9,13 @@ const HomeLayout = (props) => {
   return (
     <div className="">
       <Navbar></Navbar>
+      <Jumbotron />
       <div className="overflow-hidden">
-        <Jumbotron />
         <OrganizeTripSection />
         <div className="mx-auto max-w-7xl px-8 sm:px-6 lg:px-8">{children}</div>
+        <ButtonBotFixed />
+        <Footer />
       </div>
-      <ButtonBotFixed />
-      <Footer />
     </div>
   );
 };

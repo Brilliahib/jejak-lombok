@@ -52,6 +52,14 @@ body {
   align-items: center;
 }
 
+.bg-jumbotron {
+  background-image: url(https://images.unsplash.com/photo-1621001481322-facc9cd1dae7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: center;
+  margin-top: -7rem;
+  min-height: 100vh;
+}
+
 .arrow-destination a {
   color: green;
   font-weight: 600;
@@ -180,11 +188,6 @@ body {
   height: 50px;
 }
 
-.bg-video {
-  min-height: 100vh;
-  margin-top: -4rem !important;
-}
-
 @media (max-width: 576px) {
   html,
   body {
@@ -200,7 +203,7 @@ body {
     min-height: 30vh;
   }
   .jumbotron h1 {
-    color: #000;
+    color: #fff;
     text-align: center;
     font-size: 36px;
     font-weight: 900;

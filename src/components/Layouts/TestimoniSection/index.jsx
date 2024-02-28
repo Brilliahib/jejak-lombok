@@ -8,7 +8,7 @@ const TestimoniSection = () => {
     AOS.init({ durattion: 2000 });
   });
   return (
-    <div className="py-12 sm:py-24">
+    <div className="py-12 sm:py-24 overflow-hidden">
       <p
         className="text-base uppercase font-semibold text-sky-700 tracking-wider leading-loose"
         data-aos="fade-right"
