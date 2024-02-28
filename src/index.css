@@ -42,17 +42,6 @@ body {
   text-align: center; /* Mengatur konten agar muncul di tengah pop-up */
 }
 
-.close {
-  background-color: rgb(3 105 161);
-  position: absolute;
-  padding: 6px 12px;
-  border-radius: 6px;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  color: white;
-}
-
 .header-content {
   min-height: 60vh;
   margin-top: -6rem;

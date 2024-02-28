@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import CardShop from "../../Fragments/CardShop";
 import { jsPDF } from "jspdf";
 import CardMerchandise from "../../Fragments/CardMerchandise";
+import "jspdf-autotable";
 
 const ShopLayout = () => {
   const [selectedItems, setSelectedItems] = useState([]);
@@ -18,43 +19,129 @@ const ShopLayout = () => {
   const generatePDFData = () => {
     const doc = new jsPDF();
 
-    doc.setFont("courier");
-    doc.setFontSize(12);
-    doc.text(
-      "Pembayaran Jejak Lombok Merchandise",
-      105,
-      10,
-      null,
-      null,
-      "center"
-    );
-
+    doc.setFont("times");
     doc.setFontSize(20);
-    doc.text("Total Pembayaran", 105, 30, null, null, "center");
+    doc.text("JEJAK LOMBOK", 105, 20, null, null, "center");
 
-    doc.setFontSize(14);
+    doc.setFontSize(12);
     doc.text(
-      `Total Harga: Rp ${calculateTotalPrice().toLocaleString()}`,
+      `Jalan Raya Senggigi, Lombok Barat Nusa Tenggara Barat, Indonesia`,
       105,
-      50,
+      30,
       null,
       null,
       "center"
     );
 
-    // Panduan pembayaran
-    doc.setFontSize(14);
-    doc.text("Panduan Pembayaran:", 20, 70);
+    doc.line(10, 40, 200, 40);
+
+    const startX = 10;
+    const startY = 40;
+
+    // Header untuk tabel
+    const tableColumns = ["Nama Item", "Jumlah", "Harga"];
+    const tableData = selectedItems.map((item) => {
+      return [
+        item.title,
+        item.quantity,
+        `Rp ${(item.price * item.quantity).toLocaleString()}`,
+      ];
+    });
+
+    // Menambahkan tabel dengan warna latar atas abu-abu
+    doc.autoTable({
+      startY: startY + 10, // Mulai tabel sedikit di bawah garis horizontal
+      head: [tableColumns],
+      body: tableData,
+      theme: "grid", // Tema tabel dengan garis
+      margin: { top: startY + 15 }, // Margin dari tabel
+      headStyles: { fillColor: [211, 211, 211], textColor: [0, 0, 0] }, // Warna latar atas tabel dan teksnya
+      styles: {
+        font: "times", // Set font tabel menjadi courier
+      },
+    });
+
+    // Hitung total harga
+    const totalHarga = selectedItems.reduce(
+      (total, item) => total + item.price * item.quantity,
+      0
+    );
+
+    // Simpan posisi akhir tabel
+    const tableEndY = doc.autoTable.previous.finalY;
+
+    // Hitung posisi X untuk total pembayaran agar berada di pojok kanan
+    const totalPaymentX = doc.internal.pageSize.width - 10;
+
+    // Tambahkan teks total pembayaran di bawah tabel
     doc.setFontSize(12);
-    doc.text("1. Bayar di Indomaret", 20, 80);
-    doc.text("2. Transfer Bank BRI:", 20, 90);
-    doc.text("   - No. Rekening: XXX-XXXX-XXXX", 30, 100);
-    doc.text("   - Nama Penerima: Jejak Lombok Merchandise", 30, 110);
-    doc.text("3. Transfer ke bank lainnya:", 20, 120);
-    doc.text("   - Gunakan transfer antar bank atau ATM", 30, 130);
-    doc.text("   - Input data penerima sesuai bank tujuan", 30, 140);
-    doc.text("4. Pembayaran di outlet resmi:", 20, 150);
-    doc.text("   - Kunjungi outlet resmi Jejak Lombok Merchandise", 30, 160);
+    doc.text(
+      `Total Pembayaran: Rp ${totalHarga.toLocaleString()}`,
+      totalPaymentX,
+      tableEndY + 10,
+      { align: "right" }
+    );
+
+    const transactionDateTime = new Date().toLocaleString();
+    doc.setFontSize(10);
+    doc.text(`Waktu Pemesanan: ${transactionDateTime}`, startX, tableEndY + 30);
+
+    // Tambahkan batas waktu pembayaran
+    const deadlineDate = new Date();
+    deadlineDate.setDate(deadlineDate.getDate() + 1); // Paling lambat bayar 1 hari setelah transaksi
+    const deadlineDateString = deadlineDate.toLocaleDateString();
+    doc.text(
+      `Batas Waktu Pembayaran: ${deadlineDateString}`,
+      startX,
+      tableEndY + 40
+    );
+
+    // Tambahkan panduan pembayaran pada slide berikutnya
+    doc.addPage();
+    doc.setFont("times");
+    doc.setFontSize(20);
+    doc.text("JEJAK LOMBOK", 105, 20, null, null, "center");
+
+    doc.setFontSize(12);
+    doc.text(
+      `Jalan Raya Senggigi, Lombok Barat Nusa Tenggara Barat, Indonesia`,
+      105,
+      30,
+      null,
+      null,
+      "center"
+    );
+
+    doc.line(10, 40, 200, 40);
+
+    doc.setFontSize(12);
+    doc.text("Panduan Pembayaran:", startX, startY + 20);
+    doc.setFontSize(10);
+    doc.text("1. Bayar di Indomaret", startX, startY + 30);
+    doc.text("2. Transfer Bank BRI:", startX, startY + 40);
+    doc.text("   - No. Rekening: XXX-XXXX-XXXX", startX + 5, startY + 50);
+    doc.text(
+      "   - Nama Penerima: Jejak Lombok Merchandise",
+      startX + 5,
+      startY + 60
+    );
+    doc.text("3. Transfer ke bank lainnya:", startX, startY + 70);
+    doc.text(
+      "   - Gunakan transfer antar bank atau ATM",
+      startX + 5,
+      startY + 80
+    );
+    doc.text(
+      "   - Input data penerima sesuai bank tujuan",
+      startX + 5,
+      startY + 90
+    );
+    doc.text("4. Pembayaran di outlet resmi:", startX, startY + 100);
+    doc.text(
+      "   - Kunjungi outlet resmi Jejak Lombok Merchandise",
+      startX + 5,
+      startY + 110
+    );
 
     return doc.output();
   };
@@ -172,7 +259,7 @@ const ShopLayout = () => {
               style={{ width: 800, maxHeight: "80vh", overflowY: "auto" }}
             >
               <button
-                className="absolute top-4 right-4 bg-red-500 text-white rounded-full w-8 h-8 flex items-center justify-center"
+                className="absolute top-4 right-4 bg-red-500 text-white rounded-md w-8 h-8 flex items-center justify-center"
                 onClick={() => setShowPopup(false)}
               >
                 <svg
@@ -198,8 +285,8 @@ const ShopLayout = () => {
                     className="rounded-lg mr-4"
                     width={100}
                   />
-                  <div>
-                    <h2 className="text-xl font-semibold mb-2">
+                  <div className="mb-4">
+                    <h2 className="text-base font-semibold mb-2">
                       {selectedItem.title}
                     </h2>
                     <p>Jumlah: {selectedItem.quantity}</p>
@@ -231,10 +318,10 @@ const ShopLayout = () => {
                   onClick={handleAction}
                   className={`bg-${
                     selectedItems.length > 0 ? "sky" : "green"
-                  }-700 text-white px-4 py-2 rounded-md`}
+                  }-700 font-medium text-white px-8 py-2 rounded-md border border-transparent transition duration-300 hover:bg-white hover:border-sky-700 hover:text-sky-700`}
                 >
                   {selectedItems.length > 0
-                    ? "Bayar Sekarang (PDF)"
+                    ? "Bayar Sekarang"
                     : "Bayar Sekarang"}
                 </button>
               </div>

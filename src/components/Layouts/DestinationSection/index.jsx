@@ -129,7 +129,11 @@ const DestinationLayout = () => {
               exit={{ y: "100vh", scale: 0.5 }}
               transition={{ duration: 0.3 }}
             >
-              <span className="close" onClick={() => setShowPopup(false)}>
+              <span
+                className="close absolute top-4 right-4 bg-red-500 text-white rounded-md w-8 h-8 flex items-center justify-center"
+                style={{ cursor: "pointer" }}
+                onClick={() => setShowPopup(false)}
+              >
                 &times;
               </span>
 
