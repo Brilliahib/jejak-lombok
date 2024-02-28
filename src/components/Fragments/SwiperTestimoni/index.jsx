@@ -34,7 +34,6 @@ export default () => {
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
         style={{ zIndex: 0 }}
-        cssMode={true}
         pagination={{
           clickable: true, // Make pagination clickable
         }}
@@ -44,7 +43,11 @@ export default () => {
         className="mySwiper mx-16"
       >
         {limitedData.map((testimoni, index) => (
-          <SwiperSlide key={index} className="rounded-xl">
+          <SwiperSlide
+            key={index}
+            className="rounded-xl"
+            style={{ cursor: "grab", color: "black" }}
+          >
             <CardTestimoni testimoni={testimoni} />
           </SwiperSlide>
         ))}
