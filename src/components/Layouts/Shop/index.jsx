@@ -82,16 +82,19 @@ const ShopLayout = () => {
       { align: "right" }
     );
 
-    const transactionDateTime = new Date().toLocaleString();
+    const transactionDateTime = new Date();
     doc.setFontSize(10);
-    doc.text(`Waktu Pemesanan: ${transactionDateTime}`, startX, tableEndY + 30);
-
-    // Tambahkan batas waktu pembayaran
-    const deadlineDate = new Date();
-    deadlineDate.setDate(deadlineDate.getDate() + 1); // Paling lambat bayar 1 hari setelah transaksi
-    const deadlineDateString = deadlineDate.toLocaleDateString();
     doc.text(
-      `Batas Waktu Pembayaran: ${deadlineDateString}`,
+      `Waktu Pemesanan: ${transactionDateTime.toLocaleString()}`,
+      startX,
+      tableEndY + 30
+    );
+
+    // Tambahkan batas waktu pembayaran dengan jam yang sama seperti waktu pemesanan
+    const deadlineDateTime = new Date(transactionDateTime);
+    deadlineDateTime.setDate(deadlineDateTime.getDate() + 1); // Paling lambat bayar 1 hari setelah transaksi
+    doc.text(
+      `Batas Waktu Pembayaran: ${deadlineDateTime.toLocaleString()}`,
       startX,
       tableEndY + 40
     );
