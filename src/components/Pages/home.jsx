@@ -15,7 +15,6 @@ const HomePage = () => {
       <ExploreSection />
       <TestimoniSection />
       <LoliBotSection />
-      <BeritaLayout />
     </HomeLayout>
   );
 };

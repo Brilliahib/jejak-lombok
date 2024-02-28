@@ -2,7 +2,7 @@ import LogoWithCircle from "../../../assets/img/logo-with-circle.png";
 
 const Footer = () => {
   return (
-    <div className="bg-sky-900 text-white sm:mt-24 mt-12">
+    <div className="bg-sky-900 text-white sm:mt-0 mt-12">
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8 py-12">
         <div className="sm:flex sm:grid sm:grid-cols-3 sm:gap-4 justify-between">
           <div className="sm:mb-0 mb-8">
