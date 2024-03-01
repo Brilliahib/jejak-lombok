@@ -92,7 +92,7 @@ const DestinationLayout = () => {
                             <img
                               src={slide}
                               alt={card.title}
-                              className="rounded-xl h-full"
+                              className="rounded-xl sm:h-full h-auto"
                             />
                           </SwiperSlide>
                         ))}
