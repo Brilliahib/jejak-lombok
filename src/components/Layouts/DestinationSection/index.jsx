@@ -3,6 +3,10 @@ import cardData from "../DestinationSection/cardData.json";
 import { motion, AnimatePresence } from "framer-motion";
 import SearchBar from "../../Fragments/SearchBar";
 import Card from "../../Fragments/Card";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
 
 const DestinationLayout = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -27,7 +31,7 @@ const DestinationLayout = () => {
   };
 
   return (
-    <div className="mx-auto max-w-7xl px-8 sm:px-6 lg:px-8 sm:mt-24 mt-12">
+    <div className="mx-auto max-w-7xl px-8 sm:px-6 lg:px-8 sm:mt-24 mt-12 z-100">
       <div
         className="flex justify-center search-bar"
         style={{ marginTop: "-8rem" }}
@@ -51,15 +55,48 @@ const DestinationLayout = () => {
               imageUrl={card.imageUrl}
               description={card.location}
               title={card.title}
+              slide={card.slide}
               onClick={() =>
                 handleCardClick(
                   <div className="sm:flex sm:grid sm:grid-cols-2 sm:gap-x-12">
-                    <div className="div-pop-img">
-                      <img
-                        src={card.imageUrl}
-                        alt={card.title}
-                        className="popup-image mt-10 rounded-xl mb-4 sm:m-0"
-                      />
+                    <div className="div-pop-img sm:mt-0 mt-12">
+                      <Swiper
+                        spaceBetween={20}
+                        slidesPerView={1}
+                        breakpoints={{
+                          // Breakpoints for responsive design
+                          576: {
+                            slidesPerView: 1,
+                            spaceBetween: 20,
+                          },
+                          768: {
+                            slidesPerView: 1,
+                            spaceBetween: 20,
+                          },
+                          1024: {
+                            slidesPerView: 1,
+                            spaceBetween: 30,
+                          },
+                        }}
+                        onSlideChange={() => console.log("slide change")}
+                        onSwiper={(swiper) => console.log(swiper)}
+                        style={{ zIndex: 0 }}
+                        pagination={{
+                          clickable: true,
+                        }}
+                        modules={[Pagination]}
+                        className="mySwiper rounded-xl"
+                      >
+                        {card.slide.map((slide, index) => (
+                          <SwiperSlide key={index} style={{ cursor: "grab" }}>
+                            <img
+                              src={slide}
+                              alt={card.title}
+                              className="rounded-xl h-full"
+                            />
+                          </SwiperSlide>
+                        ))}
+                      </Swiper>
                     </div>
                     <div className="pop-content">
                       <h6 className="font-bold text-xl text-left mb-4">
