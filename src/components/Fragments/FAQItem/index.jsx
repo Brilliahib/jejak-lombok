@@ -34,10 +34,10 @@ function FAQItem({ question, answer, isOpen, toggleOpen }) {
         <hr className="border-gray-400" />
       </div>
       <div
-        className={`faq-item-content overflow-hidden transition-all duration-500 ${
+        className={`faq-item-content overflow-hidden transition-all duration-700 ${
           isOpen ? "h-auto" : "h-0"
         }`}
-        style={{ maxHeight: isOpen ? "10rem" : "0" }}
+        style={{ maxHeight: isOpen ? "20rem" : "0" }}
       >
         <p className="mt-4 text-[#6F6F6F] leading-loose">{answer}</p>
       </div>
