@@ -99,7 +99,7 @@ const DestinationLayout = () => {
                       </Swiper>
                     </div>
                     <div className="pop-content">
-                      <h6 className="font-bold text-xl text-left mb-4">
+                      <h6 className="font-bold text-xl text-left mb-4 tracking-wide">
                         {card.title}
                       </h6>
                       <div className="flex sm:items-center mb-4 sm:gap-x-0 gap-x-1">
