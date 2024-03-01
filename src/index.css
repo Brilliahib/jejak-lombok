@@ -235,4 +235,11 @@ body {
     width: 25px !important;
     border-radius: 100px !important;
   }
+  .swiper-pagination-bullet {
+    width: 6px !important;
+    height: 6px !important;
+  }
+  .swiper-slide {
+    padding-bottom: 35px;
+  }
 }

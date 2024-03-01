@@ -59,7 +59,7 @@ const DestinationLayout = () => {
               onClick={() =>
                 handleCardClick(
                   <div className="sm:flex sm:grid sm:grid-cols-2 sm:gap-x-12">
-                    <div className="div-pop-img sm:mt-0 mt-12">
+                    <div className="div-pop-img sm:mt-0 mt-12 mb-6 sm:mb-0">
                       <Swiper
                         spaceBetween={20}
                         slidesPerView={1}
@@ -92,7 +92,7 @@ const DestinationLayout = () => {
                             <img
                               src={slide}
                               alt={card.title}
-                              className="rounded-xl w-full sm:h-[500px] h-auto"
+                              className="rounded-xl w-full sm:h-[500px] h-[250px]"
                             />
                           </SwiperSlide>
                         ))}
@@ -102,7 +102,7 @@ const DestinationLayout = () => {
                       <h6 className="font-bold text-xl text-left mb-4">
                         {card.title}
                       </h6>
-                      <div className="flex items-center mb-4">
+                      <div className="flex sm:items-center mb-4 sm:gap-x-0 gap-x-1">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
@@ -122,12 +122,12 @@ const DestinationLayout = () => {
                             d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
                           />
                         </svg>
-                        <p className="text-[#6F6F6F] text-sm">
+                        <p className="text-[#6F6F6F] text-sm text-left">
                           {card.location}
                         </p>
                       </div>
                       <div className="deskripsi-destinasi text-left mb-4">
-                        <p className="text-slate-900 text-sm leading-loose">
+                        <p className="text-slate-900 text-sm leading-loose tracking-wide">
                           {card.deskripsi}
                         </p>
                       </div>
@@ -167,7 +167,7 @@ const DestinationLayout = () => {
               transition={{ duration: 0.3 }}
             >
               <span
-                className="close absolute top-4 right-4 bg-red-500 text-white rounded-md w-8 h-8 flex items-center justify-center"
+                className="fixed close absolute top-4 right-4 bg-red-500 text-white rounded-md w-8 h-8 flex items-center justify-center"
                 style={{ cursor: "pointer" }}
                 onClick={() => setShowPopup(false)}
               >
