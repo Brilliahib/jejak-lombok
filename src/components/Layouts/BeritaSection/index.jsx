@@ -25,7 +25,7 @@ const BeritaLayout = () => {
           <div className="lg:flex lg:gap-10 md:block">
             <a
               href="https://travel.okezone.com/read/2024/01/22/406/2958715/10-alasan-kenapa-harus-berlibur-ke-lombok-minimal-sekali-seumur-hidup"
-              className="card-berita block mb-10 sm:mb-0"
+              className="card-berita block mb-10 sm:mb-0 md:mb-12"
               data-aos="fade-up"
               data-aos-once="false"
               data-aos-duration="1000"
