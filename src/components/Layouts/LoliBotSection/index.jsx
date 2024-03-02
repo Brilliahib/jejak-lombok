@@ -10,9 +10,9 @@ const LoliBotSection = () => {
   });
 
   return (
-    <div className="sm:flex sm:grid sm:grid-cols-2 sm:gap-x-12 py-24 sm:py-28 overflow-hidden">
+    <div className="md:block lg:flex lg:grid lg:grid-cols-2 lg:gap-x-12 py-24 lg:py-28 overflow-hidden">
       <div
-        className="img-loli w-full"
+        className="img-loli w-full md:mb-12"
         data-aos="fade-right"
         data-aos-duration="1000"
       >

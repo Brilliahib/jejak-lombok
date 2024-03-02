@@ -12,7 +12,7 @@ const ExploreSection = () => {
   });
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const isMobile = windowWidth <= 640; // Ubah ukuran sesuai kebutuhan
+  const isMobile = windowWidth <= 640;
 
   useEffect(() => {
     const handleResize = () => {
@@ -52,7 +52,7 @@ const ExploreSection = () => {
       </div>
       <div className="destination-content">
         <div
-          className={`block sm:grid ${
+          className={`lg:grid lg:grid-cols-4 block md:grid md:grid-cols-2 lg:grid ${
             isMobile ? "grid-cols-2" : "grid-cols-4"
           } gap-x-8`}
         >

@@ -48,7 +48,7 @@ const DestinationLayout = () => {
         Destinasi Wisata
       </h1>
       <div className="destination-content">
-        <div className="block sm:grid grid-cols-3 gap-x-8">
+        <div className="block lg:grid lg:grid-cols-3 gap-x-8 md:grid-cols-2 md:grid">
           {filteredData.map((card, index) => (
             <Card
               key={index}

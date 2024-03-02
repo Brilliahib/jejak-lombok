@@ -22,7 +22,7 @@ function CardMerchandise({ addToCart }) {
   };
 
   return (
-    <div className="sm:grid sm:grid-cols-4 sm:gap-6 mb-8">
+    <div className="lg:grid lg:grid-cols-4 lg:gap-6 mb-8 md:grid-cols-2 md:grid md:gap-x-12">
       {CardMerchandiseData.map((item, index) => (
         <div
           key={index}

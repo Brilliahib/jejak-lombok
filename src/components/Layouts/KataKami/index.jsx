@@ -11,7 +11,7 @@ const KataKamiSection = () => {
   return (
     <div className="bg-sky-900 py-24 text-white overflow-hidden">
       <div className="mx-auto max-w-7xl px-8 sm:px-6 lg:px-8 sm:py-12">
-        <div className="sm:flex sm:grid sm:grid-cols-2 sm:gap-4">
+        <div className="sm:flex sm:grid sm:grid-cols-2 sm:gap-4 md:gap-x-12">
           <div
             className="sm:mb-0 mb-16"
             data-aos="fade-right"

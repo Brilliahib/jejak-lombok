@@ -4,11 +4,11 @@ import PaketWisataData from "./PaketWisataData.json";
 
 function PaketWisata() {
   return (
-    <div className="sm:grid sm:grid-cols-4 sm:gap-6 mb-8">
+    <div className="lg:grid lg:grid-cols-4 lg:gap-6 mb-8 md:grid-cols-2 md:grid md:gap-x-12">
       {PaketWisataData.map((item) => (
         <div
           key={item.id}
-          className="relative rounded-xl shadow-md card-paket-wisata h-[400px] sm:mb-0 mb-12 rounded-xl"
+          className="relative rounded-xl shadow-md card-paket-wisata h-[400px] sm:mb-0 mb-12 rounded-xl md:mb-12"
         >
           <img
             src={item.imageUrl}

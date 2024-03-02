@@ -50,8 +50,8 @@ const PaymentPaketWisata = () => {
 
   return (
     <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8 sm:mt-24 mt-12 mb-12 px-8">
-      <div className="sm:flex sm:grid sm:grid-cols-2 sm:gap-16">
-        <div className="sm:bg-whte sm:shadow-xl sm:rounded-xl sm:p-12 mb-16 sm:mb-0">
+      <div className="lg:flex lg:grid lg:grid-cols-2 lg:gap-16 md:block">
+        <div className="sm:bg-whte sm:shadow-xl sm:rounded-xl sm:p-12 mb-16 sm:mb-0 md:mb-16">
           <div className="img-payment mb-4">
             {/* Gambar paket wisata */}
             <img
@@ -63,7 +63,13 @@ const PaymentPaketWisata = () => {
           </div>
           <div className="card-payment-detail p-4 bg-[#F5F6F8] rounded-3xl mb-16">
             {/* Informasi detail paket wisata */}
-            <p className="text-base font-semibold">Paket Wisata Jejak Lombok</p>
+            <p className="text-xl font-bold mb-3 uppercase">
+              Paket Wisata Jejak Lombok
+            </p>
+            <hr className="mb-4 border-gray-400" />
+            <p className="text-base font-medium text-slate-900">
+              Informasi Hotel :
+            </p>
             <div className="flex gap-x-4 my-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +85,7 @@ const PaymentPaketWisata = () => {
                   d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205 3 1m1.5.5-1.5-.5M6.75 7.364V3h-3v18m3-13.636 10.5-3.819"
                 />
               </svg>{" "}
-              <p className="text-sm text-[#6F6F6F]">
+              <p className="text-sm text-[#6F6F6F] leading-loose">
                 Gili Sudak Lombok Resort - Gili Sudak Jl. Jalan Dahlia no.1B
                 Pelembak, Ampenan, Sekotong Barat, Lombok 83231 Indonesia
               </p>

@@ -22,13 +22,13 @@ function CardShop({ addToCart }) {
   };
 
   return (
-    <div className="sm:grid sm:grid-cols-4 sm:gap-6 mb-8">
+    <div className="lf:grid lg:grid-cols-4 lg:gap-6 mb-8 md:flex md:grid md:grid-cols-2 md:gap-x-12">
       {CardShopData.map((item, index) => (
         <div
           key={index}
           className="relative rounded-xl shadow-md card-shop h-auto sm:h-[475px] mb-12"
         >
-          <img src={item.imageUrl} alt="" className="rounded-t-xl" />
+          <img src={item.imageUrl} alt="" className="rounded-t-xl md:w-full" />
           <div className="bg-white p-4 rounded-xl">
             <p className="font-semibold text-base my-3">{item.title}</p>
             <p className="text-slate-900 text-sm mb-2 font-bold">

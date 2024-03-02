@@ -10,7 +10,7 @@ const PaymentStatusLayout = ({
 }) => {
   return (
     <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8 sm:mt-24 mt-12 mb-12 px-8">
-      <div className="sm:flex sm:grid sm:grid-cols-2 sm:gap-16">
+      <div className="lg:flex lg:grid lg:grid-cols-2 lg:gap-16 md:block">
         <div className="sm:bg-whte sm:shadow-xl sm:rounded-xl sm:p-12 mb-16 sm:mb-0">
           <div className="img-payment mb-4">
             <img
@@ -21,8 +21,33 @@ const PaymentStatusLayout = ({
             />
           </div>
           <div className="card-payment-detail p-4 bg-[#F5F6F8] rounded-3xl mb-16">
-            <p className="text-base font-semibold">Paket Wisata Jejak Lombok</p>
-            <p className="text-base font-semibold text-[#6F6F6F]">500+ orang</p>
+            <p className="text-xl font-bold mb-3 uppercase">
+              Paket Wisata Jejak Lombok
+            </p>
+            <hr className="mb-4 border-gray-400" />
+            <p className="text-base font-medium text-gray-600">
+              Informasi Hotel :
+            </p>
+            <div className="flex gap-x-4 my-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-12 h-12 text-sky-700"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205 3 1m1.5.5-1.5-.5M6.75 7.364V3h-3v18m3-13.636 10.5-3.819"
+                />
+              </svg>{" "}
+              <p className="text-sm text-[#6F6F6F] leading-loose">
+                Gili Sudak Lombok Resort - Gili Sudak Jl. Jalan Dahlia no.1B
+                Pelembak, Ampenan, Sekotong Barat, Lombok 83231 Indonesia
+              </p>
+            </div>
             <div className="bg-sky-700 rounded-3xl p-6 text-white mt-4 mb-[-60px]">
               <p className="text-xl font-semibold mb-12">
                 Rp. {nominalPaket.toLocaleString()}
@@ -33,7 +58,7 @@ const PaymentStatusLayout = ({
               </p>
             </div>
           </div>
-          <div className="desc-payment">
+          <div className="desc-payment sticky">
             <p className="mb-4 text-xl font-bold text-slate-900">
               Cara Pembayaran
             </p>
@@ -54,7 +79,7 @@ const PaymentStatusLayout = ({
             </ol>
           </div>
         </div>
-        <div className="relative">
+        <div className="relative md:flex md:justify-center lg:block">
           <div className="sticky top-20">
             <div className="card-status-payment flex flex-col gap-6 h-[70vh] md:w-[38vw] justify-center items-center">
               <div className="text-center">
@@ -112,6 +137,11 @@ const PaymentStatusLayout = ({
                 <p className="text-slate-300">6####</p>
                 <p>SALIN</p>
               </div>
+              <img
+                src="https://miro.medium.com/v2/resize:fit:405/1*k0h04CRy0j8MbBbqsodGAA.png"
+                alt=""
+                className="w-[150px]"
+              />
               <p className="text-base">
                 Status :{" "}
                 <span

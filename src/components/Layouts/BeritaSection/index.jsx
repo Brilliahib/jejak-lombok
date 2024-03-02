@@ -22,7 +22,7 @@ const BeritaLayout = () => {
               Kumpulan Berita Wisata Lombok
             </h1>
           </div>
-          <div className="sm:flex sm:gap-10">
+          <div className="lg:flex lg:gap-10 md:block">
             <a
               href="https://travel.okezone.com/read/2024/01/22/406/2958715/10-alasan-kenapa-harus-berlibur-ke-lombok-minimal-sekali-seumur-hidup"
               className="card-berita block mb-10 sm:mb-0"
