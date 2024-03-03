@@ -12,13 +12,12 @@ const Jumbotron = () => {
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 pt-16 jumbotron">
         <div className="flex items-center h-[100vh] justify-center text-center">
           <h1
-            className="text-6xl font-black leading-tight mb-8 tracking-wide text-white text-shadow"
+            className="text-6xl font-black mb-4 tracking-wide text-white leading-normal text-shadow"
             data-aos="fade-right"
             data-aos-once="false"
             data-aos-duration="1000"
           >
-            Discover The Natural Beauty <br />
-            of Lombok Island
+            Discover The Natural Beauty <br /> of Lombok Island
           </h1>
           <div
             className=""

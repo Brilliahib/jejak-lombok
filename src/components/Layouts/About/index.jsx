@@ -1,4 +1,5 @@
 import KataKamiSection from "../KataKami";
+import LayananSection from "../LayananKamiSection";
 import OurTeamSection from "../OurTeam";
 import OurWebSection from "../OurWebsite";
 
@@ -7,6 +8,7 @@ const AboutLayout = () => {
     <div>
       <OurWebSection />
       <KataKamiSection />
+      <LayananSection />
       <OurTeamSection />
     </div>
   );
