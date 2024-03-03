@@ -8,6 +8,23 @@ const PaymentStatusLayout = ({
   paymentStatus,
   handleRefreshStatus,
 }) => {
+  const [title, setTitle] = useState("");
+  const [price, setPrice] = useState(0);
+  const [description, setDescription] = useState("");
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    setTitle(params.get("title") || "Default Title");
+    const paramsDesc = new URLSearchParams(window.location.search);
+    setDescription(paramsDesc.get("description") || "Default Title");
+    const parsedPrice = parseInt(params.get("price"));
+    setPrice(isNaN(parsedPrice) ? 0 : parsedPrice);
+  }, []);
+
+  const isTitleProvided = title !== undefined && title !== null && title !== "";
+
+  // Menentukan judul berdasarkan apakah judul diberikan atau tidak
+  const displayTitle = isTitleProvided ? title : "Judul Tidak Tersedia";
   return (
     <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8 sm:mt-24 mt-12 mb-12 px-8">
       <div className="lg:flex lg:grid lg:grid-cols-2 lg:gap-16 md:block">
@@ -21,29 +38,56 @@ const PaymentStatusLayout = ({
             />
           </div>
           <div className="card-payment-detail p-4 bg-[#F5F6F8] rounded-3xl mb-16">
-            <p className="text-xl font-bold mb-3 uppercase">
-              Paket Wisata Jejak Lombok
-            </p>
+            <p className="text-lg font-bold mb-3 uppercase">{displayTitle}</p>
             <hr className="mb-4 border-gray-400" />
-            <p className="text-base font-medium text-gray-600">
+            <ol className="leading-loose mb-4">
+              {description.split(",").map((item, index) => (
+                <li
+                  key={index}
+                  className="flex gap-x-2 h-full items-center text-sm leading-loose text-[#6F6F6F]"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-5 h-5 text-sky-700"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"
+                    />
+                  </svg>
+                  {item.trim()}
+                </li>
+              ))}
+            </ol>
+            <p className="text-base font-semibold text-slate-900 mb-2">
               Informasi Hotel :
             </p>
-            <div className="flex gap-x-4 my-4">
+            <div className="flex gap-x-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="w-12 h-12 text-sky-700"
+                class="w-10 h-10 mt-[-8px] text-sky-700"
               >
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205 3 1m1.5.5-1.5-.5M6.75 7.364V3h-3v18m3-13.636 10.5-3.819"
+                  d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
                 />
-              </svg>{" "}
-              <p className="text-sm text-[#6F6F6F] leading-loose">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+                />
+              </svg>
+              <p className="text-sm text-[#6F6F6F] leading-relaxed">
                 Gili Sudak Lombok Resort - Gili Sudak Jl. Jalan Dahlia no.1B
                 Pelembak, Ampenan, Sekotong Barat, Lombok 83231 Indonesia
               </p>
@@ -59,7 +103,7 @@ const PaymentStatusLayout = ({
             </div>
           </div>
           <div className="desc-payment">
-            <p className="mb-4 text-xl font-bold text-slate-900">
+            <p className="mb-4 text-lg font-bold text-slate-900">
               Cara Pembayaran
             </p>
             <ol className="list-decimal ml-4 leading-loose text-gray-600 text-justify">
