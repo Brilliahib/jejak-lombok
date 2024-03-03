@@ -4,12 +4,21 @@ const LayananSection = () => {
   return (
     <div className="mx-auto max-w-7xl px-8 sm:px-6 lg:px-8 sm:mt-24 sm:my-48 my-24 overflow-hidden">
       <div className="heading">
-        <h1
-          className="font-black text-4xl text-center"
-          data-aos="fade-up"
+        <p
+          className="text-base uppercase font-semibold text-sky-700 tracking-wider leading-loose mb-2"
+          data-aos="fade-right"
+          data-aos-once="false"
           data-aos-duration="1000"
         >
-          Layanan Kami
+          LAYANAN KAMI
+        </p>
+        <h1
+          className="font-black text-4xl"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          data-aos-delay="200"
+        >
+          Hadir Untuk Perjalanan Anda
         </h1>
       </div>
       <div className="card-content-layanan py-12">
