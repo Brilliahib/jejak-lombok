@@ -18,7 +18,7 @@ const OurWebSection = () => {
             data-aos-once="false"
             data-aos-duration="1000"
           >
-            <img src={Asset} alt="" />
+            <img src={Asset} alt="" className="w-[450px]" />
           </div>
           <div className="flex h-full items-center ">
             <div>
@@ -44,7 +44,7 @@ const OurWebSection = () => {
                   data-aos-duration="1000"
                   data-aos-delay="200"
                 >
-                  <p className="leading-loose text-gray-600">
+                  <p className="leading-loose text-gray-600 text-justify">
                     Website Jejak Lombok adalah platform yang menyajikan
                     informasi lengkap tentang destinasi wisata di Pulau Lombok.
                     Dengan fitur destinasi wisata, pengguna dapat dengan mudah
