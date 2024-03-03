@@ -2,6 +2,7 @@ import Button from "../../Elements/Button";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import React, { useEffect } from "react";
+import BgOrganize from "../../../assets/img/bg-edit.png";
 
 const OrganizeTripSection = () => {
   useEffect(() => {
@@ -12,7 +13,7 @@ const OrganizeTripSection = () => {
     <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 py-24 text-white px-8">
       <div className="block lg:flex lg:grid lg:grid-cols-2 lg:gap-12 md:block">
         <div
-          className="md:mb-12"
+          className="md:mb-24"
           data-aos="fade-right"
           data-aos-once="false"
           data-aos-duration="1000"
@@ -32,11 +33,12 @@ const OrganizeTripSection = () => {
           data-aos="fade-left"
           data-aos-once="false"
           data-aos-duration="1000"
+          className="lg:flex lg:justify-end flex justify-center"
         >
           <img
-            src="https://images.unsplash.com/photo-1500207907633-4ccab9bf1535?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src={BgOrganize}
             alt=""
-            className="w-full mt-12 sm:mt-0 rounded-xl"
+            className="w-[500px] mt-12 sm:mt-0 rounded-xl"
           />
         </div>
       </div>
