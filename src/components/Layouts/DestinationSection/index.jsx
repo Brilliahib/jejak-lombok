@@ -58,7 +58,7 @@ const DestinationLayout = () => {
               slide={card.slide}
               onClick={() =>
                 handleCardClick(
-                  <div className="sm:flex sm:grid sm:grid-cols-2 sm:gap-x-12">
+                  <div className="lg:flex lg:grid lg:grid-cols-2 lg:gap-x-12 md:block">
                     <div className="div-pop-img sm:mt-0 mt-12 mb-6 sm:mb-0">
                       <Swiper
                         spaceBetween={20}
@@ -78,14 +78,13 @@ const DestinationLayout = () => {
                             spaceBetween: 30,
                           },
                         }}
-                        onSlideChange={() => console.log("slide change")}
                         onSwiper={(swiper) => console.log(swiper)}
                         style={{ zIndex: 0 }}
                         pagination={{
                           clickable: true,
                         }}
                         modules={[Pagination]}
-                        className="mySwiper rounded-xl"
+                        className="mySwiper rounded-xl md:mt-10 lg:mt-0"
                       >
                         {card.slide.map((slide, index) => (
                           <SwiperSlide key={index} style={{ cursor: "grab" }}>

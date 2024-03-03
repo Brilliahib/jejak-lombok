@@ -8,6 +8,7 @@ const PaymentPaketWisata = () => {
   const [totalNominal, setTotalNominal] = useState(0);
   const [selectedPaketPrice, setSelectedPaketPrice] = useState(0);
   const containerRef = useRef(null);
+  const [jumlahOrang, setJumlahOrang] = useState(1);
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -41,8 +42,10 @@ const PaymentPaketWisata = () => {
   const handleBayarSekarang = (e) => {
     e.preventDefault();
     if (nama !== "") {
-      setTotalNominal(selectedPaketPrice);
-      window.location.href = `/shop/paket-wisata/payment/status?nama=${nama}&nominal=${selectedPaketPrice}&metodePembayaran=${selectedPayment}`;
+      // Mengalikan nominal paket dengan jumlah orang
+      const total = selectedPaketPrice * jumlahOrang;
+      setTotalNominal(total);
+      window.location.href = `/shop/paket-wisata/payment/status?nama=${nama}&nominal=${total}&metodePembayaran=${selectedPayment}`;
     } else {
       alert("Mohon isi nama Anda terlebih dahulu.");
     }
@@ -93,7 +96,7 @@ const PaymentPaketWisata = () => {
             <div className="bg-sky-700 rounded-3xl p-6 text-white mt-4 mb-[-60px]">
               {/* Harga paket wisata */}
               <p className="text-xl font-semibold mb-12">
-                Rp. {selectedPaketPrice.toLocaleString()}
+                Rp. {selectedPaketPrice.toLocaleString()} / Orang
               </p>
               {/* Deskripsi tambahan */}
               <p className="text-sm text-gray-300">
@@ -124,7 +127,7 @@ const PaymentPaketWisata = () => {
           </div>
         </div>
         {/* Form pembayaran */}
-        <div className="relative">
+        <div className="relative mb-12">
           <div className="sticky top-20">
             <form action="" onSubmit={handleBayarSekarang}>
               {/* Input nama dan nomor telepon */}
@@ -167,15 +170,17 @@ const PaymentPaketWisata = () => {
                   />
                 </div>
                 <div className="w-full mb-8">
-                  <label htmlFor="tanggal" className="font-medium">
+                  <label htmlFor="jumlahOrang" className="font-medium">
                     Jumlah Orang
                   </label>
                   <input
                     type="number"
-                    id="tanggal"
+                    id="jumlahOrang"
                     className="mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-[20px] focus:ring-primary focus:border-primary block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-sky-700 tracking-wide leading-loose"
                     placeholder="0"
-                    min={0}
+                    min={1}
+                    value={jumlahOrang}
+                    onChange={(e) => setJumlahOrang(e.target.value)}
                   />
                 </div>
               </div>

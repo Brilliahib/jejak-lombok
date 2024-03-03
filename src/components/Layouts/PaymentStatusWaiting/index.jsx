@@ -58,7 +58,7 @@ const PaymentStatusLayout = ({
               </p>
             </div>
           </div>
-          <div className="desc-payment sticky">
+          <div className="desc-payment">
             <p className="mb-4 text-xl font-bold text-slate-900">
               Cara Pembayaran
             </p>
@@ -79,7 +79,7 @@ const PaymentStatusLayout = ({
             </ol>
           </div>
         </div>
-        <div className="relative md:flex md:justify-center lg:block">
+        <div className="relative md:flex md:justify-center lg:block mb-8">
           <div className="sticky top-20">
             <div className="card-status-payment flex flex-col gap-6 h-[70vh] md:w-[38vw] justify-center items-center">
               <div className="text-center">
