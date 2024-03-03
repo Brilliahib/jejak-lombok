@@ -10,7 +10,7 @@ const OurTeamSection = () => {
   });
   return (
     <div>
-      <div className="mx-auto max-w-7xl px-8 sm:px-6 lg:px-8 sm:mt-24 sm:my-48 my-16 overflow-hidden">
+      <div className="mx-auto max-w-7xl px-8 sm:px-6 lg:px-8 sm:mt-24 sm:my-24 my-12 overflow-hidden">
         <div>
           <p
             className="text-base uppercase font-semibold text-sky-700 tracking-wider leading-loose mb-2"
