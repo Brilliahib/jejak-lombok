@@ -51,13 +51,12 @@ const Chatbot = () => {
       lowercaseInput.includes("assalamualaikum")
     ) {
       botResponse = messagesData.greeting;
-    } else if (
-      lowercaseInput.includes("destinasi") ||
-      lowercaseInput.includes("wisata")
-    ) {
+    } else if (lowercaseInput.includes("destinasi")) {
       botResponse = messagesData.destinasi;
     } else if (lowercaseInput.includes("makanan")) {
       botResponse = messagesData.makanan;
+    } else if (lowercaseInput.includes("jejak")) {
+      botResponse = messagesData.jejak;
     } else if (lowercaseInput.includes("lombok")) {
       botResponse = messagesData.lombok;
     } else if (
@@ -67,6 +66,8 @@ const Chatbot = () => {
       botResponse = messagesData.gunung;
     } else if (lowercaseInput.includes("pantai")) {
       botResponse = messagesData.pantai;
+    } else if (lowercaseInput.includes("paket")) {
+      botResponse = messagesData.paket;
     } else {
       botResponse = messagesData.default;
     }
